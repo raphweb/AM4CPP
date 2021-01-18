@@ -1,0 +1,3 @@
+[submodule "libs/emf4cpp"]
+	path = libs/emf4cpp
+	url = git@github.com:raphweb/emf4cpp.git
