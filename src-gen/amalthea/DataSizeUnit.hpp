@@ -19,24 +19,24 @@ namespace amalthea
     enum class DataSizeUnit
     {
         _undefined_ = 0 /* _undefined_*/
-        , bit = 0 /* bit*/
-        , kbit = 0 /* kbit*/
-        , Mbit = 0 /* Mbit*/
-        , Gbit = 0 /* Gbit*/
-        , Tbit = 0 /* Tbit*/
-        , Kibit = 0 /* Kibit*/
-        , Mibit = 0 /* Mibit*/
-        , Gibit = 0 /* Gibit*/
-        , Tibit = 0 /* Tibit*/
-        , B = 0 /* B*/
-        , kB = 0 /* kB*/
-        , MB = 0 /* MB*/
-        , GB = 0 /* GB*/
-        , TB = 0 /* TB*/
-        , KiB = 0 /* KiB*/
-        , MiB = 0 /* MiB*/
-        , GiB = 0 /* GiB*/
-        , TiB = 0 /* TiB*/
+        , bit = 1 /* bit*/
+        , kbit = 2 /* kbit*/
+        , Mbit = 3 /* Mbit*/
+        , Gbit = 4 /* Gbit*/
+        , Tbit = 5 /* Tbit*/
+        , Kibit = 6 /* Kibit*/
+        , Mibit = 7 /* Mibit*/
+        , Gibit = 8 /* Gibit*/
+        , Tibit = 9 /* Tibit*/
+        , B = 10 /* B*/
+        , kB = 11 /* kB*/
+        , MB = 12 /* MB*/
+        , GB = 13 /* GB*/
+        , TB = 14 /* TB*/
+        , KiB = 15 /* KiB*/
+        , MiB = 16 /* MiB*/
+        , GiB = 17 /* GiB*/
+        , TiB = 18 /* TiB*/
     };
 // DataSizeUnit Values array.
     static const DataSizeUnit DataSizeUnit_Values[] =

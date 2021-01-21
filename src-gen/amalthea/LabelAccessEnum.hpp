@@ -19,8 +19,8 @@ namespace amalthea
     enum class LabelAccessEnum
     {
         _undefined_ = 0 /* _undefined_*/
-        , read = 0 /* read*/
-        , write = 0 /* write*/
+        , read = 1 /* read*/
+        , write = 2 /* write*/
     };
 // LabelAccessEnum Values array.
     static const LabelAccessEnum LabelAccessEnum_Values[] =

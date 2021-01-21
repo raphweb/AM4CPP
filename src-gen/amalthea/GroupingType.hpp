@@ -19,8 +19,8 @@ namespace amalthea
     enum class GroupingType
     {
         _undefined_ = 0 /* _undefined_*/
-        , allOfThem = 0 /* allOfThem*/
-        , atLeastOneOfThem = 0 /* atLeastOneOfThem*/
+        , allOfThem = 1 /* allOfThem*/
+        , atLeastOneOfThem = 2 /* atLeastOneOfThem*/
     };
 // GroupingType Values array.
     static const GroupingType GroupingType_Values[] =

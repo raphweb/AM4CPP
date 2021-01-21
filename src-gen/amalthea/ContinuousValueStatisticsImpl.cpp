@@ -42,7 +42,7 @@ void ContinuousValueStatistics::_initialize()
 
 // EObject
 ::ecore::EJavaObject ContinuousValueStatistics::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -64,7 +64,7 @@ void ContinuousValueStatistics::_initialize()
 }
 
 void ContinuousValueStatistics::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -125,7 +125,7 @@ void ContinuousValueStatistics::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void ContinuousValueStatistics::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -137,7 +137,7 @@ void ContinuousValueStatistics::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void ContinuousValueStatistics::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

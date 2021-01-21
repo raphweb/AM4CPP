@@ -47,7 +47,7 @@ void SemaphoreAccess::_initialize()
 
 // EObject
 ::ecore::EJavaObject SemaphoreAccess::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -80,7 +80,7 @@ void SemaphoreAccess::_initialize()
 }
 
 void SemaphoreAccess::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -172,7 +172,7 @@ void SemaphoreAccess::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void SemaphoreAccess::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -192,7 +192,7 @@ void SemaphoreAccess::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void SemaphoreAccess::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

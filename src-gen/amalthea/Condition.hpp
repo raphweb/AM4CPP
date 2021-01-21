@@ -19,8 +19,8 @@ namespace amalthea
     enum class Condition
     {
         _undefined_ = 0 /* _undefined_*/
-        , requires = 0 /* requires*/
-        , excludes = 0 /* excludes*/
+        , requires = 1 /* requires*/
+        , excludes = 2 /* excludes*/
     };
 // Condition Values array.
     static const Condition Condition_Values[] =

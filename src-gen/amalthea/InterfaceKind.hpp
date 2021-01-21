@@ -19,9 +19,9 @@ namespace amalthea
     enum class InterfaceKind
     {
         _undefined_ = 0 /* _undefined_*/
-        , provides = 0 /* provides*/
-        , requires = 0 /* requires*/
-        , provides_requires = 0 /* provides_requires*/
+        , provides = 1 /* provides*/
+        , requires = 2 /* requires*/
+        , provides_requires = 3 /* provides_requires*/
     };
 // InterfaceKind Values array.
     static const InterfaceKind InterfaceKind_Values[] =

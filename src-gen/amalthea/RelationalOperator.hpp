@@ -19,10 +19,10 @@ namespace amalthea
     enum class RelationalOperator
     {
         _undefined_ = 0 /* _undefined_*/
-        , EQUAL = 0 /* EQUAL*/
-        , NOT_EQUAL = 0 /* NOT_EQUAL*/
-        , LESS_THAN = 0 /* LESS_THAN*/
-        , GREATER_THAN = 0 /* GREATER_THAN*/
+        , EQUAL = 1 /* EQUAL*/
+        , NOT_EQUAL = 2 /* NOT_EQUAL*/
+        , LESS_THAN = 3 /* LESS_THAN*/
+        , GREATER_THAN = 4 /* GREATER_THAN*/
     };
 // RelationalOperator Values array.
     static const RelationalOperator RelationalOperator_Values[] =

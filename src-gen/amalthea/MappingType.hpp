@@ -19,9 +19,9 @@ namespace amalthea
     enum class MappingType
     {
         _undefined_ = 0 /* _undefined_*/
-        , OneToOne = 0 /* OneToOne*/
-        , Reaction = 0 /* Reaction*/
-        , UniqueReaction = 0 /* UniqueReaction*/
+        , OneToOne = 1 /* OneToOne*/
+        , Reaction = 2 /* Reaction*/
+        , UniqueReaction = 3 /* UniqueReaction*/
     };
 // MappingType Values array.
     static const MappingType MappingType_Values[] =

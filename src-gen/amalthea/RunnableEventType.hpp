@@ -19,10 +19,10 @@ namespace amalthea
     enum class RunnableEventType
     {
         _all_ = 0 /* _all_*/
-        , start = 0 /* start*/
-        , suspend = 0 /* suspend*/
-        , resume = 0 /* resume*/
-        , terminate = 0 /* terminate*/
+        , start = 1 /* start*/
+        , suspend = 2 /* suspend*/
+        , resume = 3 /* resume*/
+        , terminate = 4 /* terminate*/
     };
 // RunnableEventType Values array.
     static const RunnableEventType RunnableEventType_Values[] =

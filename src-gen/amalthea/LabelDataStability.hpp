@@ -19,10 +19,10 @@ namespace amalthea
     enum class LabelDataStability
     {
         _undefined_ = 0 /* _undefined_*/
-        , noProtection = 0 /* noProtection*/
-        , automaticProtection = 0 /* automaticProtection*/
-        , customProtection = 0 /* customProtection*/
-        , handledByModelElements = 0 /* handledByModelElements*/
+        , noProtection = 1 /* noProtection*/
+        , automaticProtection = 2 /* automaticProtection*/
+        , customProtection = 3 /* customProtection*/
+        , handledByModelElements = 4 /* handledByModelElements*/
     };
 // LabelDataStability Values array.
     static const LabelDataStability LabelDataStability_Values[] =

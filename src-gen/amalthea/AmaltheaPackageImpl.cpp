@@ -10705,7 +10705,7 @@ void AmaltheaPackage::_initPackage()
             dynamic_cast< ::ecore::EcorePackage* >(::ecore::EcorePackage::_instance().get())->getEFloat());
     initEStructuralFeature(
             ::ecore::as < ::ecore::EAttribute > (m_MinAvgMaxStatistic__avg),
-            "avg", true, false, false, "0f", false, false, true, false, 0, 1,
+            "avg", true, false, false, "", false, false, true, false, 0, 1,
             false, false);
     m_MinAvgMaxStatistic__avg->setID(false);
     m_MinAvgMaxStatistic__max->setEType(
@@ -10758,7 +10758,7 @@ void AmaltheaPackage::_initPackage()
             dynamic_cast< ::ecore::EcorePackage* >(::ecore::EcorePackage::_instance().get())->getEFloat());
     initEStructuralFeature(
             ::ecore::as < ::ecore::EAttribute > (m_SingleValueStatistic__value),
-            "value", true, false, false, "0f", false, false, true, false, 0, 1,
+            "value", true, false, false, "", false, false, true, false, 0, 1,
             false, false);
     m_SingleValueStatistic__value->setID(false);
     // ITimeDeviation
@@ -17471,25 +17471,25 @@ void AmaltheaPackage::_initPackage()
     {
         // EQUAL
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RelationalOperatorEEnum, "EQUAL", 0, "EQUAL");
+                m_RelationalOperatorEEnum, "EQUAL", 1, "EQUAL");
     }
 
     {
         // NOT_EQUAL
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RelationalOperatorEEnum, "NOT_EQUAL", 0, "NOT_EQUAL");
+                m_RelationalOperatorEEnum, "NOT_EQUAL", 2, "NOT_EQUAL");
     }
 
     {
         // LESS_THAN
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RelationalOperatorEEnum, "LESS_THAN", 0, "LESS_THAN");
+                m_RelationalOperatorEEnum, "LESS_THAN", 3, "LESS_THAN");
     }
 
     {
         // GREATER_THAN
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RelationalOperatorEEnum, "GREATER_THAN", 0, "GREATER_THAN");
+                m_RelationalOperatorEEnum, "GREATER_THAN", 4, "GREATER_THAN");
     }
 
     // TimeUnit
@@ -17504,32 +17504,32 @@ void AmaltheaPackage::_initPackage()
 
     {
         // s
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeUnitEEnum, "s", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeUnitEEnum, "s", 1,
                 "s");
     }
 
     {
         // ms
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeUnitEEnum, "ms",
-                0, "ms");
+                2, "ms");
     }
 
     {
         // us
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeUnitEEnum, "us",
-                0, "us");
+                3, "us");
     }
 
     {
         // ns
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeUnitEEnum, "ns",
-                0, "ns");
+                4, "ns");
     }
 
     {
         // ps
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeUnitEEnum, "ps",
-                0, "ps");
+                5, "ps");
     }
 
     // FrequencyUnit
@@ -17545,25 +17545,25 @@ void AmaltheaPackage::_initPackage()
     {
         // Hz
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_FrequencyUnitEEnum,
-                "Hz", 0, "Hz");
+                "Hz", 1, "Hz");
     }
 
     {
         // kHz
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_FrequencyUnitEEnum,
-                "kHz", 0, "kHz");
+                "kHz", 2, "kHz");
     }
 
     {
         // MHz
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_FrequencyUnitEEnum,
-                "MHz", 0, "MHz");
+                "MHz", 3, "MHz");
     }
 
     {
         // GHz
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_FrequencyUnitEEnum,
-                "GHz", 0, "GHz");
+                "GHz", 4, "GHz");
     }
 
     // VoltageUnit
@@ -17579,19 +17579,19 @@ void AmaltheaPackage::_initPackage()
     {
         // uV
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_VoltageUnitEEnum,
-                "uV", 0, "uV");
+                "uV", 1, "uV");
     }
 
     {
         // mV
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_VoltageUnitEEnum,
-                "mV", 0, "mV");
+                "mV", 2, "mV");
     }
 
     {
         // V
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_VoltageUnitEEnum, "V",
-                0, "V");
+                3, "V");
     }
 
     // DataSizeUnit
@@ -17607,109 +17607,109 @@ void AmaltheaPackage::_initPackage()
     {
         // bit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "bit", 0, "bit");
+                "bit", 1, "bit");
     }
 
     {
         // kbit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "kbit", 0, "kbit");
+                "kbit", 2, "kbit");
     }
 
     {
         // Mbit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Mbit", 0, "Mbit");
+                "Mbit", 3, "Mbit");
     }
 
     {
         // Gbit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Gbit", 0, "Gbit");
+                "Gbit", 4, "Gbit");
     }
 
     {
         // Tbit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Tbit", 0, "Tbit");
+                "Tbit", 5, "Tbit");
     }
 
     {
         // Kibit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Kibit", 0, "Kibit");
+                "Kibit", 6, "Kibit");
     }
 
     {
         // Mibit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Mibit", 0, "Mibit");
+                "Mibit", 7, "Mibit");
     }
 
     {
         // Gibit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Gibit", 0, "Gibit");
+                "Gibit", 8, "Gibit");
     }
 
     {
         // Tibit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "Tibit", 0, "Tibit");
+                "Tibit", 9, "Tibit");
     }
 
     {
         // B
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "B", 0, "B");
+                "B", 10, "B");
     }
 
     {
         // kB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "kB", 0, "kB");
+                "kB", 11, "kB");
     }
 
     {
         // MB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "MB", 0, "MB");
+                "MB", 12, "MB");
     }
 
     {
         // GB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "GB", 0, "GB");
+                "GB", 13, "GB");
     }
 
     {
         // TB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "TB", 0, "TB");
+                "TB", 14, "TB");
     }
 
     {
         // KiB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "KiB", 0, "KiB");
+                "KiB", 15, "KiB");
     }
 
     {
         // MiB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "MiB", 0, "MiB");
+                "MiB", 16, "MiB");
     }
 
     {
         // GiB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "GiB", 0, "GiB");
+                "GiB", 17, "GiB");
     }
 
     {
         // TiB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataSizeUnitEEnum,
-                "TiB", 0, "TiB");
+                "TiB", 18, "TiB");
     }
 
     // DataRateUnit
@@ -17725,109 +17725,109 @@ void AmaltheaPackage::_initPackage()
     {
         // bitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "bitPerSecond", 0, "bitPerSecond");
+                "bitPerSecond", 1, "bitPerSecond");
     }
 
     {
         // kbitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "kbitPerSecond", 0, "kbitPerSecond");
+                "kbitPerSecond", 2, "kbitPerSecond");
     }
 
     {
         // MbitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "MbitPerSecond", 0, "MbitPerSecond");
+                "MbitPerSecond", 3, "MbitPerSecond");
     }
 
     {
         // GbitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "GbitPerSecond", 0, "GbitPerSecond");
+                "GbitPerSecond", 4, "GbitPerSecond");
     }
 
     {
         // TbitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "TbitPerSecond", 0, "TbitPerSecond");
+                "TbitPerSecond", 5, "TbitPerSecond");
     }
 
     {
         // KibitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "KibitPerSecond", 0, "KibitPerSecond");
+                "KibitPerSecond", 6, "KibitPerSecond");
     }
 
     {
         // MibitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "MibitPerSecond", 0, "MibitPerSecond");
+                "MibitPerSecond", 7, "MibitPerSecond");
     }
 
     {
         // GibitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "GibitPerSecond", 0, "GibitPerSecond");
+                "GibitPerSecond", 8, "GibitPerSecond");
     }
 
     {
         // TibitPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "TibitPerSecond", 0, "TibitPerSecond");
+                "TibitPerSecond", 9, "TibitPerSecond");
     }
 
     {
         // BPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "BPerSecond", 0, "BPerSecond");
+                "BPerSecond", 10, "BPerSecond");
     }
 
     {
         // kBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "kBPerSecond", 0, "kBPerSecond");
+                "kBPerSecond", 11, "kBPerSecond");
     }
 
     {
         // MBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "MBPerSecond", 0, "MBPerSecond");
+                "MBPerSecond", 12, "MBPerSecond");
     }
 
     {
         // GBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "GBPerSecond", 0, "GBPerSecond");
+                "GBPerSecond", 13, "GBPerSecond");
     }
 
     {
         // TBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "TBPerSecond", 0, "TBPerSecond");
+                "TBPerSecond", 14, "TBPerSecond");
     }
 
     {
         // KiBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "KiBPerSecond", 0, "KiBPerSecond");
+                "KiBPerSecond", 15, "KiBPerSecond");
     }
 
     {
         // MiBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "MiBPerSecond", 0, "MiBPerSecond");
+                "MiBPerSecond", 16, "MiBPerSecond");
     }
 
     {
         // GiBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "GiBPerSecond", 0, "GiBPerSecond");
+                "GiBPerSecond", 17, "GiBPerSecond");
     }
 
     {
         // TiBPerSecond
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DataRateUnitEEnum,
-                "TiBPerSecond", 0, "TiBPerSecond");
+                "TiBPerSecond", 18, "TiBPerSecond");
     }
 
     // SamplingType
@@ -17843,31 +17843,31 @@ void AmaltheaPackage::_initPackage()
     {
         // BestCase
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SamplingTypeEEnum,
-                "BestCase", 0, "BestCase");
+                "BestCase", 1, "BestCase");
     }
 
     {
         // WorstCase
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SamplingTypeEEnum,
-                "WorstCase", 0, "WorstCase");
+                "WorstCase", 2, "WorstCase");
     }
 
     {
         // AverageCase
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SamplingTypeEEnum,
-                "AverageCase", 0, "AverageCase");
+                "AverageCase", 3, "AverageCase");
     }
 
     {
         // CornerCase
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SamplingTypeEEnum,
-                "CornerCase", 0, "CornerCase");
+                "CornerCase", 4, "CornerCase");
     }
 
     {
         // Uniform
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SamplingTypeEEnum,
-                "Uniform", 0, "Uniform");
+                "Uniform", 5, "Uniform");
     }
 
     // InterfaceKind
@@ -17883,19 +17883,19 @@ void AmaltheaPackage::_initPackage()
     {
         // provides
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_InterfaceKindEEnum,
-                "provides", 0, "provides");
+                "provides", 1, "provides");
     }
 
     {
         // requires
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_InterfaceKindEEnum,
-                "requires", 0, "requires");
+                "requires", 2, "requires");
     }
 
     {
         // provides_requires
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_InterfaceKindEEnum,
-                "provides_requires", 0, "provides_requires");
+                "provides_requires", 3, "provides_requires");
     }
 
     // RunnableOrderType
@@ -17911,27 +17911,27 @@ void AmaltheaPackage::_initPackage()
     {
         // successor
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableOrderTypeEEnum, "successor", 0, "successor");
+                m_RunnableOrderTypeEEnum, "successor", 1, "successor");
     }
 
     {
         // immediateSuccessorStartSequence
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableOrderTypeEEnum, "immediateSuccessorStartSequence", 0,
+                m_RunnableOrderTypeEEnum, "immediateSuccessorStartSequence", 2,
                 "immediateSuccessorStartSequence");
     }
 
     {
         // immediateSuccessorAnySequence
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableOrderTypeEEnum, "immediateSuccessorAnySequence", 0,
+                m_RunnableOrderTypeEEnum, "immediateSuccessorAnySequence", 3,
                 "immediateSuccessorAnySequence");
     }
 
     {
         // immediateSuccessorEndSequence
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableOrderTypeEEnum, "immediateSuccessorEndSequence", 0,
+                m_RunnableOrderTypeEEnum, "immediateSuccessorEndSequence", 4,
                 "immediateSuccessorEndSequence");
     }
 
@@ -17948,13 +17948,13 @@ void AmaltheaPackage::_initPackage()
     {
         // sequence
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_EventChainItemTypeEEnum, "sequence", 0, "sequence");
+                m_EventChainItemTypeEEnum, "sequence", 1, "sequence");
     }
 
     {
         // parallel
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_EventChainItemTypeEEnum, "parallel", 0, "parallel");
+                m_EventChainItemTypeEEnum, "parallel", 2, "parallel");
     }
 
     // SynchronizationType
@@ -17970,13 +17970,13 @@ void AmaltheaPackage::_initPackage()
     {
         // Stimulus
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SynchronizationTypeEEnum, "Stimulus", 0, "Stimulus");
+                m_SynchronizationTypeEEnum, "Stimulus", 1, "Stimulus");
     }
 
     {
         // Response
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SynchronizationTypeEEnum, "Response", 0, "Response");
+                m_SynchronizationTypeEEnum, "Response", 2, "Response");
     }
 
     // MappingType
@@ -17992,19 +17992,19 @@ void AmaltheaPackage::_initPackage()
     {
         // OneToOne
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MappingTypeEEnum,
-                "OneToOne", 0, "OneToOne");
+                "OneToOne", 1, "OneToOne");
     }
 
     {
         // Reaction
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MappingTypeEEnum,
-                "Reaction", 0, "Reaction");
+                "Reaction", 2, "Reaction");
     }
 
     {
         // UniqueReaction
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MappingTypeEEnum,
-                "UniqueReaction", 0, "UniqueReaction");
+                "UniqueReaction", 3, "UniqueReaction");
     }
 
     // LatencyType
@@ -18020,13 +18020,13 @@ void AmaltheaPackage::_initPackage()
     {
         // Age
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LatencyTypeEEnum,
-                "Age", 0, "Age");
+                "Age", 1, "Age");
     }
 
     {
         // Reaction
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LatencyTypeEEnum,
-                "Reaction", 0, "Reaction");
+                "Reaction", 2, "Reaction");
     }
 
     // Severity
@@ -18042,25 +18042,25 @@ void AmaltheaPackage::_initPackage()
     {
         // Cosmetic
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SeverityEEnum,
-                "Cosmetic", 0, "Cosmetic");
+                "Cosmetic", 1, "Cosmetic");
     }
 
     {
         // Minor
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SeverityEEnum,
-                "Minor", 0, "Minor");
+                "Minor", 2, "Minor");
     }
 
     {
         // Major
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SeverityEEnum,
-                "Major", 0, "Major");
+                "Major", 3, "Major");
     }
 
     {
         // Critical
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SeverityEEnum,
-                "Critical", 0, "Critical");
+                "Critical", 4, "Critical");
     }
 
     // LimitType
@@ -18076,13 +18076,13 @@ void AmaltheaPackage::_initPackage()
     {
         // UpperLimit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LimitTypeEEnum,
-                "UpperLimit", 0, "UpperLimit");
+                "UpperLimit", 1, "UpperLimit");
     }
 
     {
         // LowerLimit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LimitTypeEEnum,
-                "LowerLimit", 0, "LowerLimit");
+                "LowerLimit", 2, "LowerLimit");
     }
 
     // TimeMetric
@@ -18098,103 +18098,103 @@ void AmaltheaPackage::_initPackage()
     {
         // ActivateToActivate
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "ActivateToActivate", 0, "ActivateToActivate");
+                "ActivateToActivate", 1, "ActivateToActivate");
     }
 
     {
         // CoreExecutionTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "CoreExecutionTime", 0, "CoreExecutionTime");
+                "CoreExecutionTime", 2, "CoreExecutionTime");
     }
 
     {
         // EndToEnd
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "EndToEnd", 0, "EndToEnd");
+                "EndToEnd", 3, "EndToEnd");
     }
 
     {
         // EndToStart
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "EndToStart", 0, "EndToStart");
+                "EndToStart", 4, "EndToStart");
     }
 
     {
         // GrossExecutionTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "GrossExecutionTime", 0, "GrossExecutionTime");
+                "GrossExecutionTime", 5, "GrossExecutionTime");
     }
 
     {
         // Lateness
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "Lateness", 0, "Lateness");
+                "Lateness", 6, "Lateness");
     }
 
     {
         // MemoryAccessTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "MemoryAccessTime", 0, "MemoryAccessTime");
+                "MemoryAccessTime", 7, "MemoryAccessTime");
     }
 
     {
         // NetExecutionTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "NetExecutionTime", 0, "NetExecutionTime");
+                "NetExecutionTime", 8, "NetExecutionTime");
     }
 
     {
         // OsOverhead
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "OsOverhead", 0, "OsOverhead");
+                "OsOverhead", 9, "OsOverhead");
     }
 
     {
         // ParkingTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "ParkingTime", 0, "ParkingTime");
+                "ParkingTime", 10, "ParkingTime");
     }
 
     {
         // PollingTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "PollingTime", 0, "PollingTime");
+                "PollingTime", 11, "PollingTime");
     }
 
     {
         // ReadyTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "ReadyTime", 0, "ReadyTime");
+                "ReadyTime", 12, "ReadyTime");
     }
 
     {
         // ResponseTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "ResponseTime", 0, "ResponseTime");
+                "ResponseTime", 13, "ResponseTime");
     }
 
     {
         // RunningTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "RunningTime", 0, "RunningTime");
+                "RunningTime", 14, "RunningTime");
     }
 
     {
         // StartDelay
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "StartDelay", 0, "StartDelay");
+                "StartDelay", 15, "StartDelay");
     }
 
     {
         // StartToStart
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "StartToStart", 0, "StartToStart");
+                "StartToStart", 16, "StartToStart");
     }
 
     {
         // WaitingTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_TimeMetricEEnum,
-                "WaitingTime", 0, "WaitingTime");
+                "WaitingTime", 17, "WaitingTime");
     }
 
     // CountMetric
@@ -18210,43 +18210,43 @@ void AmaltheaPackage::_initPackage()
     {
         // Activations
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "Activations", 0, "Activations");
+                "Activations", 1, "Activations");
     }
 
     {
         // BoundedMigrations
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "BoundedMigrations", 0, "BoundedMigrations");
+                "BoundedMigrations", 2, "BoundedMigrations");
     }
 
     {
         // CacheHit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "CacheHit", 0, "CacheHit");
+                "CacheHit", 3, "CacheHit");
     }
 
     {
         // CacheMiss
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "CacheMiss", 0, "CacheMiss");
+                "CacheMiss", 4, "CacheMiss");
     }
 
     {
         // FullMigrations
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "FullMigrations", 0, "FullMigrations");
+                "FullMigrations", 5, "FullMigrations");
     }
 
     {
         // MtaLimitExceeding
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "MtaLimitExceeding", 0, "MtaLimitExceeding");
+                "MtaLimitExceeding", 6, "MtaLimitExceeding");
     }
 
     {
         // Preemptions
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CountMetricEEnum,
-                "Preemptions", 0, "Preemptions");
+                "Preemptions", 7, "Preemptions");
     }
 
     // PercentageMetric
@@ -18262,43 +18262,43 @@ void AmaltheaPackage::_initPackage()
     {
         // CacheHitRatio
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "CacheHitRatio", 0, "CacheHitRatio");
+                "CacheHitRatio", 1, "CacheHitRatio");
     }
 
     {
         // CacheMissRatio
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "CacheMissRatio", 0, "CacheMissRatio");
+                "CacheMissRatio", 2, "CacheMissRatio");
     }
 
     {
         // CoreExecutionTimeRelative
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "CoreExecutionTimeRelative", 0, "CoreExecutionTimeRelative");
+                "CoreExecutionTimeRelative", 3, "CoreExecutionTimeRelative");
     }
 
     {
         // MemoryAccessTimeRelative
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "MemoryAccessTimeRelative", 0, "MemoryAccessTimeRelative");
+                "MemoryAccessTimeRelative", 4, "MemoryAccessTimeRelative");
     }
 
     {
         // NormalizedLateness
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "NormalizedLateness", 0, "NormalizedLateness");
+                "NormalizedLateness", 5, "NormalizedLateness");
     }
 
     {
         // NormalizedResponseTime
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "NormalizedResponseTime", 0, "NormalizedResponseTime");
+                "NormalizedResponseTime", 6, "NormalizedResponseTime");
     }
 
     {
         // OsOverheadRelative
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PercentageMetricEEnum,
-                "OsOverheadRelative", 0, "OsOverheadRelative");
+                "OsOverheadRelative", 7, "OsOverheadRelative");
     }
 
     // CPUPercentageMetric
@@ -18314,43 +18314,43 @@ void AmaltheaPackage::_initPackage()
     {
         // CPUBuffering
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPUBuffering", 0, "CPUBuffering");
+                m_CPUPercentageMetricEEnum, "CPUBuffering", 1, "CPUBuffering");
     }
 
     {
         // CPULoad
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPULoad", 0, "CPULoad");
+                m_CPUPercentageMetricEEnum, "CPULoad", 2, "CPULoad");
     }
 
     {
         // CPUParking
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPUParking", 0, "CPUParking");
+                m_CPUPercentageMetricEEnum, "CPUParking", 3, "CPUParking");
     }
 
     {
         // CPUPolling
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPUPolling", 0, "CPUPolling");
+                m_CPUPercentageMetricEEnum, "CPUPolling", 4, "CPUPolling");
     }
 
     {
         // CPUReady
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPUReady", 0, "CPUReady");
+                m_CPUPercentageMetricEEnum, "CPUReady", 5, "CPUReady");
     }
 
     {
         // CPURunning
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPURunning", 0, "CPURunning");
+                m_CPUPercentageMetricEEnum, "CPURunning", 6, "CPURunning");
     }
 
     {
         // CPUWaiting
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CPUPercentageMetricEEnum, "CPUWaiting", 0, "CPUWaiting");
+                m_CPUPercentageMetricEEnum, "CPUWaiting", 7, "CPUWaiting");
     }
 
     // FrequencyMetric
@@ -18366,13 +18366,13 @@ void AmaltheaPackage::_initPackage()
     {
         // CacheHitFrequency
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_FrequencyMetricEEnum,
-                "CacheHitFrequency", 0, "CacheHitFrequency");
+                "CacheHitFrequency", 1, "CacheHitFrequency");
     }
 
     {
         // CacheMissFrequency
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_FrequencyMetricEEnum,
-                "CacheMissFrequency", 0, "CacheMissFrequency");
+                "CacheMissFrequency", 2, "CacheMissFrequency");
     }
 
     // CoherencyDirection
@@ -18388,13 +18388,13 @@ void AmaltheaPackage::_initPackage()
     {
         // input
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CoherencyDirectionEEnum, "input", 0, "input");
+                m_CoherencyDirectionEEnum, "input", 1, "input");
     }
 
     {
         // output
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_CoherencyDirectionEEnum, "output", 0, "output");
+                m_CoherencyDirectionEEnum, "output", 2, "output");
     }
 
     // ProcessEventType
@@ -18410,73 +18410,73 @@ void AmaltheaPackage::_initPackage()
     {
         // activate
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "activate", 0, "activate");
+                "activate", 1, "activate");
     }
 
     {
         // start
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "start", 0, "start");
+                "start", 2, "start");
     }
 
     {
         // resume
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "resume", 0, "resume");
+                "resume", 3, "resume");
     }
 
     {
         // preempt
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "preempt", 0, "preempt");
+                "preempt", 4, "preempt");
     }
 
     {
         // poll
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "poll", 0, "poll");
+                "poll", 5, "poll");
     }
 
     {
         // run
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "run", 0, "run");
+                "run", 6, "run");
     }
 
     {
         // wait
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "wait", 0, "wait");
+                "wait", 7, "wait");
     }
 
     {
         // poll_parking
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "poll_parking", 0, "poll_parking");
+                "poll_parking", 8, "poll_parking");
     }
 
     {
         // park
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "park", 0, "park");
+                "park", 9, "park");
     }
 
     {
         // release_parking
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "release_parking", 0, "release_parking");
+                "release_parking", 10, "release_parking");
     }
 
     {
         // release
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "release", 0, "release");
+                "release", 11, "release");
     }
 
     {
         // terminate
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ProcessEventTypeEEnum,
-                "terminate", 0, "terminate");
+                "terminate", 12, "terminate");
     }
 
     // RunnableEventType
@@ -18492,25 +18492,25 @@ void AmaltheaPackage::_initPackage()
     {
         // start
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableEventTypeEEnum, "start", 0, "start");
+                m_RunnableEventTypeEEnum, "start", 1, "start");
     }
 
     {
         // suspend
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableEventTypeEEnum, "suspend", 0, "suspend");
+                m_RunnableEventTypeEEnum, "suspend", 2, "suspend");
     }
 
     {
         // resume
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableEventTypeEEnum, "resume", 0, "resume");
+                m_RunnableEventTypeEEnum, "resume", 3, "resume");
     }
 
     {
         // terminate
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_RunnableEventTypeEEnum, "terminate", 0, "terminate");
+                m_RunnableEventTypeEEnum, "terminate", 4, "terminate");
     }
 
     // LabelEventType
@@ -18526,13 +18526,13 @@ void AmaltheaPackage::_initPackage()
     {
         // read
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LabelEventTypeEEnum,
-                "read", 0, "read");
+                "read", 1, "read");
     }
 
     {
         // write
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LabelEventTypeEEnum,
-                "write", 0, "write");
+                "write", 2, "write");
     }
 
     // ChannelEventType
@@ -18548,13 +18548,13 @@ void AmaltheaPackage::_initPackage()
     {
         // send
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ChannelEventTypeEEnum,
-                "send", 0, "send");
+                "send", 1, "send");
     }
 
     {
         // receive
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ChannelEventTypeEEnum,
-                "receive", 0, "receive");
+                "receive", 2, "receive");
     }
 
     // SemaphoreEventType
@@ -18570,13 +18570,13 @@ void AmaltheaPackage::_initPackage()
     {
         // lock
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SemaphoreEventTypeEEnum, "lock", 0, "lock");
+                m_SemaphoreEventTypeEEnum, "lock", 1, "lock");
     }
 
     {
         // unlock
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SemaphoreEventTypeEEnum, "unlock", 0, "unlock");
+                m_SemaphoreEventTypeEEnum, "unlock", 2, "unlock");
     }
 
     // ComponentEventType
@@ -18592,13 +18592,13 @@ void AmaltheaPackage::_initPackage()
     {
         // start
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_ComponentEventTypeEEnum, "start", 0, "start");
+                m_ComponentEventTypeEEnum, "start", 1, "start");
     }
 
     {
         // end
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_ComponentEventTypeEEnum, "end", 0, "end");
+                m_ComponentEventTypeEEnum, "end", 2, "end");
     }
 
     // MemoryType
@@ -18614,25 +18614,25 @@ void AmaltheaPackage::_initPackage()
     {
         // DRAM
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MemoryTypeEEnum,
-                "DRAM", 0, "DRAM");
+                "DRAM", 1, "DRAM");
     }
 
     {
         // SRAM
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MemoryTypeEEnum,
-                "SRAM", 0, "SRAM");
+                "SRAM", 2, "SRAM");
     }
 
     {
         // FLASH
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MemoryTypeEEnum,
-                "FLASH", 0, "FLASH");
+                "FLASH", 3, "FLASH");
     }
 
     {
         // PCM
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_MemoryTypeEEnum,
-                "PCM", 0, "PCM");
+                "PCM", 4, "PCM");
     }
 
     // StructureType
@@ -18648,55 +18648,55 @@ void AmaltheaPackage::_initPackage()
     {
         // System
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "System", 0, "System");
+                "System", 1, "System");
     }
 
     {
         // ECU
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "ECU", 0, "ECU");
+                "ECU", 2, "ECU");
     }
 
     {
         // Microcontroller
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "Microcontroller", 0, "Microcontroller");
+                "Microcontroller", 3, "Microcontroller");
     }
 
     {
         // SoC
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "SoC", 0, "SoC");
+                "SoC", 4, "SoC");
     }
 
     {
         // Cluster
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "Cluster", 0, "Cluster");
+                "Cluster", 5, "Cluster");
     }
 
     {
         // Group
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "Group", 0, "Group");
+                "Group", 6, "Group");
     }
 
     {
         // Array
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "Array", 0, "Array");
+                "Array", 7, "Array");
     }
 
     {
         // Area
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "Area", 0, "Area");
+                "Area", 8, "Area");
     }
 
     {
         // Region
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_StructureTypeEEnum,
-                "Region", 0, "Region");
+                "Region", 9, "Region");
     }
 
     // CacheType
@@ -18712,19 +18712,19 @@ void AmaltheaPackage::_initPackage()
     {
         // instruction
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CacheTypeEEnum,
-                "instruction", 0, "instruction");
+                "instruction", 1, "instruction");
     }
 
     {
         // data
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CacheTypeEEnum,
-                "data", 0, "data");
+                "data", 2, "data");
     }
 
     {
         // unified
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CacheTypeEEnum,
-                "unified", 0, "unified");
+                "unified", 3, "unified");
     }
 
     // PortType
@@ -18740,13 +18740,13 @@ void AmaltheaPackage::_initPackage()
     {
         // initiator
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortTypeEEnum,
-                "initiator", 0, "initiator");
+                "initiator", 1, "initiator");
     }
 
     {
         // responder
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortTypeEEnum,
-                "responder", 0, "responder");
+                "responder", 2, "responder");
     }
 
     // SchedPolicy
@@ -18762,19 +18762,19 @@ void AmaltheaPackage::_initPackage()
     {
         // RoundRobin
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SchedPolicyEEnum,
-                "RoundRobin", 0, "RoundRobin");
+                "RoundRobin", 1, "RoundRobin");
     }
 
     {
         // FCFS
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SchedPolicyEEnum,
-                "FCFS", 0, "FCFS");
+                "FCFS", 2, "FCFS");
     }
 
     {
         // PriorityBased
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SchedPolicyEEnum,
-                "PriorityBased", 0, "PriorityBased");
+                "PriorityBased", 3, "PriorityBased");
     }
 
     // WriteStrategy
@@ -18790,19 +18790,19 @@ void AmaltheaPackage::_initPackage()
     {
         // none
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WriteStrategyEEnum,
-                "none", 0, "none");
+                "none", 1, "none");
     }
 
     {
         // writeback
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WriteStrategyEEnum,
-                "writeback", 0, "writeback");
+                "writeback", 2, "writeback");
     }
 
     {
         // writethrough
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WriteStrategyEEnum,
-                "writethrough", 0, "writethrough");
+                "writethrough", 3, "writethrough");
     }
 
     // PuType
@@ -18817,20 +18817,20 @@ void AmaltheaPackage::_initPackage()
 
     {
         // GPU
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PuTypeEEnum, "GPU", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PuTypeEEnum, "GPU", 1,
                 "GPU");
     }
 
     {
         // CPU
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PuTypeEEnum, "CPU", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PuTypeEEnum, "CPU", 2,
                 "CPU");
     }
 
     {
         // Accelerator
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PuTypeEEnum,
-                "Accelerator", 0, "Accelerator");
+                "Accelerator", 3, "Accelerator");
     }
 
     // PortInterface
@@ -18846,73 +18846,73 @@ void AmaltheaPackage::_initPackage()
     {
         // custom
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "custom", 0, "custom");
+                "custom", 1, "custom");
     }
 
     {
         // CAN
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "CAN", 0, "CAN");
+                "CAN", 2, "CAN");
     }
 
     {
         // Flexray
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "Flexray", 0, "Flexray");
+                "Flexray", 3, "Flexray");
     }
 
     {
         // LIN
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "LIN", 0, "LIN");
+                "LIN", 4, "LIN");
     }
 
     {
         // MOST
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "MOST", 0, "MOST");
+                "MOST", 5, "MOST");
     }
 
     {
         // Ethernet
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "Ethernet", 0, "Ethernet");
+                "Ethernet", 6, "Ethernet");
     }
 
     {
         // SPI
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "SPI", 0, "SPI");
+                "SPI", 7, "SPI");
     }
 
     {
         // I2C
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "I2C", 0, "I2C");
+                "I2C", 8, "I2C");
     }
 
     {
         // AXI
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "AXI", 0, "AXI");
+                "AXI", 9, "AXI");
     }
 
     {
         // AHB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "AHB", 0, "AHB");
+                "AHB", 10, "AHB");
     }
 
     {
         // APB
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "APB", 0, "APB");
+                "APB", 11, "APB");
     }
 
     {
         // SWR
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PortInterfaceEEnum,
-                "SWR", 0, "SWR");
+                "SWR", 12, "SWR");
     }
 
     // HwFeatureType
@@ -18928,19 +18928,19 @@ void AmaltheaPackage::_initPackage()
     {
         // performance
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_HwFeatureTypeEEnum,
-                "performance", 0, "performance");
+                "performance", 1, "performance");
     }
 
     {
         // power
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_HwFeatureTypeEEnum,
-                "power", 0, "power");
+                "power", 2, "power");
     }
 
     {
         // performance_and_power
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_HwFeatureTypeEEnum,
-                "performance_and_power", 0, "performance_and_power");
+                "performance_and_power", 3, "performance_and_power");
     }
 
     // MemoryAddressMappingType
@@ -18957,19 +18957,19 @@ void AmaltheaPackage::_initPackage()
     {
         // none
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_MemoryAddressMappingTypeEEnum, "none", 0, "none");
+                m_MemoryAddressMappingTypeEEnum, "none", 1, "none");
     }
 
     {
         // address
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_MemoryAddressMappingTypeEEnum, "address", 0, "address");
+                m_MemoryAddressMappingTypeEEnum, "address", 2, "address");
     }
 
     {
         // offset
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_MemoryAddressMappingTypeEEnum, "offset", 0, "offset");
+                m_MemoryAddressMappingTypeEEnum, "offset", 3, "offset");
     }
 
     // OsDataConsistencyMode
@@ -18985,28 +18985,28 @@ void AmaltheaPackage::_initPackage()
     {
         // noProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_OsDataConsistencyModeEEnum, "noProtection", 0,
+                m_OsDataConsistencyModeEEnum, "noProtection", 1,
                 "noProtection");
     }
 
     {
         // automaticProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_OsDataConsistencyModeEEnum, "automaticProtection", 0,
+                m_OsDataConsistencyModeEEnum, "automaticProtection", 2,
                 "automaticProtection");
     }
 
     {
         // customProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_OsDataConsistencyModeEEnum, "customProtection", 0,
+                m_OsDataConsistencyModeEEnum, "customProtection", 3,
                 "customProtection");
     }
 
     {
         // handledByModelElements
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_OsDataConsistencyModeEEnum, "handledByModelElements", 0,
+                m_OsDataConsistencyModeEEnum, "handledByModelElements", 4,
                 "handledByModelElements");
     }
 
@@ -19023,13 +19023,13 @@ void AmaltheaPackage::_initPackage()
     {
         // singleAccess
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_AccessMultiplicityEEnum, "singleAccess", 0, "singleAccess");
+                m_AccessMultiplicityEEnum, "singleAccess", 1, "singleAccess");
     }
 
     {
         // multipleAccesses
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_AccessMultiplicityEEnum, "multipleAccesses", 0,
+                m_AccessMultiplicityEEnum, "multipleAccesses", 2,
                 "multipleAccesses");
     }
 
@@ -19046,26 +19046,26 @@ void AmaltheaPackage::_initPackage()
     {
         // period
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_DataStabilityLevelEEnum, "period", 0, "period");
+                m_DataStabilityLevelEEnum, "period", 1, "period");
     }
 
     {
         // process
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_DataStabilityLevelEEnum, "process", 0, "process");
+                m_DataStabilityLevelEEnum, "process", 2, "process");
     }
 
     {
         // scheduleSection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_DataStabilityLevelEEnum, "scheduleSection", 0,
+                m_DataStabilityLevelEEnum, "scheduleSection", 3,
                 "scheduleSection");
     }
 
     {
         // runnable
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_DataStabilityLevelEEnum, "runnable", 0, "runnable");
+                m_DataStabilityLevelEEnum, "runnable", 4, "runnable");
     }
 
     // SemaphoreType
@@ -19081,19 +19081,19 @@ void AmaltheaPackage::_initPackage()
     {
         // CountingSemaphore
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SemaphoreTypeEEnum,
-                "CountingSemaphore", 0, "CountingSemaphore");
+                "CountingSemaphore", 1, "CountingSemaphore");
     }
 
     {
         // Resource
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SemaphoreTypeEEnum,
-                "Resource", 0, "Resource");
+                "Resource", 2, "Resource");
     }
 
     {
         // Spinlock
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_SemaphoreTypeEEnum,
-                "Spinlock", 0, "Spinlock");
+                "Spinlock", 3, "Spinlock");
     }
 
     // Condition
@@ -19109,13 +19109,13 @@ void AmaltheaPackage::_initPackage()
     {
         // requires
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ConditionEEnum,
-                "requires", 0, "requires");
+                "requires", 1, "requires");
     }
 
     {
         // excludes
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ConditionEEnum,
-                "excludes", 0, "excludes");
+                "excludes", 2, "excludes");
     }
 
     // GroupingType
@@ -19131,13 +19131,13 @@ void AmaltheaPackage::_initPackage()
     {
         // allOfThem
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_GroupingTypeEEnum,
-                "allOfThem", 0, "allOfThem");
+                "allOfThem", 1, "allOfThem");
     }
 
     {
         // atLeastOneOfThem
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_GroupingTypeEEnum,
-                "atLeastOneOfThem", 0, "atLeastOneOfThem");
+                "atLeastOneOfThem", 2, "atLeastOneOfThem");
     }
 
     // CurveType
@@ -19153,13 +19153,13 @@ void AmaltheaPackage::_initPackage()
     {
         // sine
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CurveTypeEEnum,
-                "sine", 0, "sine");
+                "sine", 1, "sine");
     }
 
     {
         // triangle
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_CurveTypeEEnum,
-                "triangle", 0, "triangle");
+                "triangle", 2, "triangle");
     }
 
     // WaitEventType
@@ -19175,13 +19175,13 @@ void AmaltheaPackage::_initPackage()
     {
         // AND
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WaitEventTypeEEnum,
-                "AND", 0, "AND");
+                "AND", 1, "AND");
     }
 
     {
         // OR
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WaitEventTypeEEnum,
-                "OR", 0, "OR");
+                "OR", 2, "OR");
     }
 
     // WaitingBehaviour
@@ -19197,13 +19197,13 @@ void AmaltheaPackage::_initPackage()
     {
         // active
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WaitingBehaviourEEnum,
-                "active", 0, "active");
+                "active", 1, "active");
     }
 
     {
         // passive
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_WaitingBehaviourEEnum,
-                "passive", 0, "passive");
+                "passive", 2, "passive");
     }
 
     // ISRCategory
@@ -19219,13 +19219,13 @@ void AmaltheaPackage::_initPackage()
     {
         // CATEGORY_1
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ISRCategoryEEnum,
-                "CATEGORY_1", 0, "CATEGORY_1");
+                "CATEGORY_1", 1, "CATEGORY_1");
     }
 
     {
         // CATEGORY_2
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ISRCategoryEEnum,
-                "CATEGORY_2", 0, "CATEGORY_2");
+                "CATEGORY_2", 2, "CATEGORY_2");
     }
 
     // AccessPrecedenceType
@@ -19241,19 +19241,19 @@ void AmaltheaPackage::_initPackage()
     {
         // defaultWR
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_AccessPrecedenceTypeEEnum, "defaultWR", 0, "defaultWR");
+                m_AccessPrecedenceTypeEEnum, "defaultWR", 1, "defaultWR");
     }
 
     {
         // ignoreWR
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_AccessPrecedenceTypeEEnum, "ignoreWR", 0, "ignoreWR");
+                m_AccessPrecedenceTypeEEnum, "ignoreWR", 2, "ignoreWR");
     }
 
     {
         // enforceRW
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_AccessPrecedenceTypeEEnum, "enforceRW", 0, "enforceRW");
+                m_AccessPrecedenceTypeEEnum, "enforceRW", 3, "enforceRW");
     }
 
     // OrderType
@@ -19269,25 +19269,25 @@ void AmaltheaPackage::_initPackage()
     {
         // order
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_OrderTypeEEnum,
-                "order", 0, "order");
+                "order", 1, "order");
     }
 
     {
         // directOrder
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_OrderTypeEEnum,
-                "directOrder", 0, "directOrder");
+                "directOrder", 2, "directOrder");
     }
 
     {
         // startSequence
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_OrderTypeEEnum,
-                "startSequence", 0, "startSequence");
+                "startSequence", 3, "startSequence");
     }
 
     {
         // endSequence
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_OrderTypeEEnum,
-                "endSequence", 0, "endSequence");
+                "endSequence", 4, "endSequence");
     }
 
     // DirectionType
@@ -19303,19 +19303,19 @@ void AmaltheaPackage::_initPackage()
     {
         // in
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DirectionTypeEEnum,
-                "in", 0, "in");
+                "in", 1, "in");
     }
 
     {
         // out
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DirectionTypeEEnum,
-                "out", 0, "out");
+                "out", 2, "out");
     }
 
     {
         // inout
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_DirectionTypeEEnum,
-                "inout", 0, "inout");
+                "inout", 3, "inout");
     }
 
     // LabelDataStability
@@ -19331,27 +19331,27 @@ void AmaltheaPackage::_initPackage()
     {
         // noProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelDataStabilityEEnum, "noProtection", 0, "noProtection");
+                m_LabelDataStabilityEEnum, "noProtection", 1, "noProtection");
     }
 
     {
         // automaticProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelDataStabilityEEnum, "automaticProtection", 0,
+                m_LabelDataStabilityEEnum, "automaticProtection", 2,
                 "automaticProtection");
     }
 
     {
         // customProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelDataStabilityEEnum, "customProtection", 0,
+                m_LabelDataStabilityEEnum, "customProtection", 3,
                 "customProtection");
     }
 
     {
         // handledByModelElements
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelDataStabilityEEnum, "handledByModelElements", 0,
+                m_LabelDataStabilityEEnum, "handledByModelElements", 4,
                 "handledByModelElements");
     }
 
@@ -19368,25 +19368,25 @@ void AmaltheaPackage::_initPackage()
     {
         // read
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_ModeLabelAccessEnumEEnum, "read", 0, "read");
+                m_ModeLabelAccessEnumEEnum, "read", 1, "read");
     }
 
     {
         // set
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_ModeLabelAccessEnumEEnum, "set", 0, "set");
+                m_ModeLabelAccessEnumEEnum, "set", 2, "set");
     }
 
     {
         // increment
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_ModeLabelAccessEnumEEnum, "increment", 0, "increment");
+                m_ModeLabelAccessEnumEEnum, "increment", 3, "increment");
     }
 
     {
         // decrement
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_ModeLabelAccessEnumEEnum, "decrement", 0, "decrement");
+                m_ModeLabelAccessEnumEEnum, "decrement", 4, "decrement");
     }
 
     // ReceiveOperation
@@ -19402,25 +19402,25 @@ void AmaltheaPackage::_initPackage()
     {
         // FIFO_Read
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ReceiveOperationEEnum,
-                "FIFO_Read", 0, "FIFO_Read");
+                "FIFO_Read", 1, "FIFO_Read");
     }
 
     {
         // FIFO_Take
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ReceiveOperationEEnum,
-                "FIFO_Take", 0, "FIFO_Take");
+                "FIFO_Take", 2, "FIFO_Take");
     }
 
     {
         // LIFO_Read
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ReceiveOperationEEnum,
-                "LIFO_Read", 0, "LIFO_Read");
+                "LIFO_Read", 3, "LIFO_Read");
     }
 
     {
         // LIFO_Take
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ReceiveOperationEEnum,
-                "LIFO_Take", 0, "LIFO_Take");
+                "LIFO_Take", 4, "LIFO_Take");
     }
 
     // LabelAccessDataStability
@@ -19437,34 +19437,34 @@ void AmaltheaPackage::_initPackage()
     {
         // inherited
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessDataStabilityEEnum, "inherited", 0, "inherited");
+                m_LabelAccessDataStabilityEEnum, "inherited", 1, "inherited");
     }
 
     {
         // noProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessDataStabilityEEnum, "noProtection", 0,
+                m_LabelAccessDataStabilityEEnum, "noProtection", 2,
                 "noProtection");
     }
 
     {
         // automaticProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessDataStabilityEEnum, "automaticProtection", 0,
+                m_LabelAccessDataStabilityEEnum, "automaticProtection", 3,
                 "automaticProtection");
     }
 
     {
         // customProtection
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessDataStabilityEEnum, "customProtection", 0,
+                m_LabelAccessDataStabilityEEnum, "customProtection", 4,
                 "customProtection");
     }
 
     {
         // handledByModelElements
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessDataStabilityEEnum, "handledByModelElements", 0,
+                m_LabelAccessDataStabilityEEnum, "handledByModelElements", 5,
                 "handledByModelElements");
     }
 
@@ -19481,13 +19481,13 @@ void AmaltheaPackage::_initPackage()
     {
         // read
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LabelAccessEnumEEnum,
-                "read", 0, "read");
+                "read", 1, "read");
     }
 
     {
         // write
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_LabelAccessEnumEEnum,
-                "write", 0, "write");
+                "write", 2, "write");
     }
 
     // LabelAccessImplementation
@@ -19504,19 +19504,19 @@ void AmaltheaPackage::_initPackage()
     {
         // explicit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessImplementationEEnum, "explicit", 0, "explicit");
+                m_LabelAccessImplementationEEnum, "explicit", 1, "explicit");
     }
 
     {
         // implicit
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessImplementationEEnum, "implicit", 0, "implicit");
+                m_LabelAccessImplementationEEnum, "implicit", 2, "implicit");
     }
 
     {
         // timed
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_LabelAccessImplementationEEnum, "timed", 0, "timed");
+                m_LabelAccessImplementationEEnum, "timed", 3, "timed");
     }
 
     // SemaphoreAccessEnum
@@ -19532,19 +19532,19 @@ void AmaltheaPackage::_initPackage()
     {
         // request
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SemaphoreAccessEnumEEnum, "request", 0, "request");
+                m_SemaphoreAccessEnumEEnum, "request", 1, "request");
     }
 
     {
         // exclusive
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SemaphoreAccessEnumEEnum, "exclusive", 0, "exclusive");
+                m_SemaphoreAccessEnumEEnum, "exclusive", 2, "exclusive");
     }
 
     {
         // release
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(
-                m_SemaphoreAccessEnumEEnum, "release", 0, "release");
+                m_SemaphoreAccessEnumEEnum, "release", 3, "release");
     }
 
     // BlockingType
@@ -19560,19 +19560,19 @@ void AmaltheaPackage::_initPackage()
     {
         // active_wait
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_BlockingTypeEEnum,
-                "active_wait", 0, "active_wait");
+                "active_wait", 1, "active_wait");
     }
 
     {
         // passive_wait
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_BlockingTypeEEnum,
-                "passive_wait", 0, "passive_wait");
+                "passive_wait", 2, "passive_wait");
     }
 
     {
         // non_blocking
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_BlockingTypeEEnum,
-                "non_blocking", 0, "non_blocking");
+                "non_blocking", 3, "non_blocking");
     }
 
     // Preemption
@@ -19588,19 +19588,19 @@ void AmaltheaPackage::_initPackage()
     {
         // preemptive
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PreemptionEEnum,
-                "preemptive", 0, "preemptive");
+                "preemptive", 1, "preemptive");
     }
 
     {
         // cooperative
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PreemptionEEnum,
-                "cooperative", 0, "cooperative");
+                "cooperative", 2, "cooperative");
     }
 
     {
         // non_preemptive
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_PreemptionEEnum,
-                "non_preemptive", 0, "non_preemptive");
+                "non_preemptive", 3, "non_preemptive");
     }
 
     // ConcurrencyType
@@ -19616,19 +19616,19 @@ void AmaltheaPackage::_initPackage()
     {
         // SingleCoreSafe
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ConcurrencyTypeEEnum,
-                "SingleCoreSafe", 0, "SingleCoreSafe");
+                "SingleCoreSafe", 1, "SingleCoreSafe");
     }
 
     {
         // MultiCoreSafe
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ConcurrencyTypeEEnum,
-                "MultiCoreSafe", 0, "MultiCoreSafe");
+                "MultiCoreSafe", 2, "MultiCoreSafe");
     }
 
     {
         // SingleCorePrioSafe
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ConcurrencyTypeEEnum,
-                "SingleCorePrioSafe", 0, "SingleCorePrioSafe");
+                "SingleCorePrioSafe", 3, "SingleCorePrioSafe");
     }
 
     // ASILType
@@ -19643,32 +19643,32 @@ void AmaltheaPackage::_initPackage()
 
     {
         // D
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "D", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "D", 1,
                 "D");
     }
 
     {
         // C
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "C", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "C", 2,
                 "C");
     }
 
     {
         // B
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "B", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "B", 3,
                 "B");
     }
 
     {
         // A
-        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "A", 0,
+        ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "A", 4,
                 "A");
     }
 
     {
         // QM
         ::ecore::EEnumLiteral_ptr _el = addEEnumLiteral(m_ASILTypeEEnum, "QM",
-                0, "QM");
+                5, "QM");
     }
 
     _initialize();

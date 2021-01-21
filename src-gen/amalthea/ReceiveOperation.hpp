@@ -19,10 +19,10 @@ namespace amalthea
     enum class ReceiveOperation
     {
         _undefined_ = 0 /* _undefined_*/
-        , FIFO_Read = 0 /* FIFO_Read*/
-        , FIFO_Take = 0 /* FIFO_Take*/
-        , LIFO_Read = 0 /* LIFO_Read*/
-        , LIFO_Take = 0 /* LIFO_Take*/
+        , FIFO_Read = 1 /* FIFO_Read*/
+        , FIFO_Take = 2 /* FIFO_Take*/
+        , LIFO_Read = 3 /* LIFO_Read*/
+        , LIFO_Take = 4 /* LIFO_Take*/
     };
 // ReceiveOperation Values array.
     static const ReceiveOperation ReceiveOperation_Values[] =

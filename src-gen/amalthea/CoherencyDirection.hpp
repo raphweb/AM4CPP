@@ -19,8 +19,8 @@ namespace amalthea
     enum class CoherencyDirection
     {
         _undefined_ = 0 /* _undefined_*/
-        , input = 0 /* input*/
-        , output = 0 /* output*/
+        , input = 1 /* input*/
+        , output = 2 /* output*/
     };
 // CoherencyDirection Values array.
     static const CoherencyDirection CoherencyDirection_Values[] =

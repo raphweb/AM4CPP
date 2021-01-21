@@ -19,9 +19,9 @@ namespace amalthea
     enum class ConcurrencyType
     {
         _undefined_ = 0 /* _undefined_*/
-        , SingleCoreSafe = 0 /* SingleCoreSafe*/
-        , MultiCoreSafe = 0 /* MultiCoreSafe*/
-        , SingleCorePrioSafe = 0 /* SingleCorePrioSafe*/
+        , SingleCoreSafe = 1 /* SingleCoreSafe*/
+        , MultiCoreSafe = 2 /* MultiCoreSafe*/
+        , SingleCorePrioSafe = 3 /* SingleCorePrioSafe*/
     };
 // ConcurrencyType Values array.
     static const ConcurrencyType ConcurrencyType_Values[] =

@@ -19,10 +19,10 @@ namespace amalthea
     enum class MemoryType
     {
         _undefined_ = 0 /* _undefined_*/
-        , DRAM = 0 /* DRAM*/
-        , SRAM = 0 /* SRAM*/
-        , FLASH = 0 /* FLASH*/
-        , PCM = 0 /* PCM*/
+        , DRAM = 1 /* DRAM*/
+        , SRAM = 2 /* SRAM*/
+        , FLASH = 3 /* FLASH*/
+        , PCM = 4 /* PCM*/
     };
 // MemoryType Values array.
     static const MemoryType MemoryType_Values[] =

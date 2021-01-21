@@ -42,7 +42,7 @@ void DiscreteValueHistogramEntry::_initialize()
 
 // EObject
 ::ecore::EJavaObject DiscreteValueHistogramEntry::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -64,7 +64,7 @@ void DiscreteValueHistogramEntry::_initialize()
 }
 
 void DiscreteValueHistogramEntry::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -127,7 +127,7 @@ void DiscreteValueHistogramEntry::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void DiscreteValueHistogramEntry::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -139,7 +139,7 @@ void DiscreteValueHistogramEntry::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void DiscreteValueHistogramEntry::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

@@ -19,8 +19,8 @@ namespace amalthea
     enum class FrequencyMetric
     {
         _undefined_ = 0 /* _undefined_*/
-        , CacheHitFrequency = 0 /* CacheHitFrequency*/
-        , CacheMissFrequency = 0 /* CacheMissFrequency*/
+        , CacheHitFrequency = 1 /* CacheHitFrequency*/
+        , CacheMissFrequency = 2 /* CacheMissFrequency*/
     };
 // FrequencyMetric Values array.
     static const FrequencyMetric FrequencyMetric_Values[] =

@@ -19,18 +19,18 @@ namespace amalthea
     enum class ProcessEventType
     {
         _all_ = 0 /* _all_*/
-        , activate = 0 /* activate*/
-        , start = 0 /* start*/
-        , resume = 0 /* resume*/
-        , preempt = 0 /* preempt*/
-        , poll = 0 /* poll*/
-        , run = 0 /* run*/
-        , wait = 0 /* wait*/
-        , poll_parking = 0 /* poll_parking*/
-        , park = 0 /* park*/
-        , release_parking = 0 /* release_parking*/
-        , release = 0 /* release*/
-        , terminate = 0 /* terminate*/
+        , activate = 1 /* activate*/
+        , start = 2 /* start*/
+        , resume = 3 /* resume*/
+        , preempt = 4 /* preempt*/
+        , poll = 5 /* poll*/
+        , run = 6 /* run*/
+        , wait = 7 /* wait*/
+        , poll_parking = 8 /* poll_parking*/
+        , park = 9 /* park*/
+        , release_parking = 10 /* release_parking*/
+        , release = 11 /* release*/
+        , terminate = 12 /* terminate*/
     };
 // ProcessEventType Values array.
     static const ProcessEventType ProcessEventType_Values[] =

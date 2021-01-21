@@ -19,8 +19,8 @@ namespace amalthea
     enum class EventChainItemType
     {
         _undefined_ = 0 /* _undefined_*/
-        , sequence = 0 /* sequence*/
-        , parallel = 0 /* parallel*/
+        , sequence = 1 /* sequence*/
+        , parallel = 2 /* parallel*/
     };
 // EventChainItemType Values array.
     static const EventChainItemType EventChainItemType_Values[] =

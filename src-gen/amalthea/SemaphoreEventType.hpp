@@ -19,8 +19,8 @@ namespace amalthea
     enum class SemaphoreEventType
     {
         _all_ = 0 /* _all_*/
-        , lock = 0 /* lock*/
-        , unlock = 0 /* unlock*/
+        , lock = 1 /* lock*/
+        , unlock = 2 /* unlock*/
     };
 // SemaphoreEventType Values array.
     static const SemaphoreEventType SemaphoreEventType_Values[] =

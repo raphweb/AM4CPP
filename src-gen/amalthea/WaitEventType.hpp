@@ -19,8 +19,8 @@ namespace amalthea
     enum class WaitEventType
     {
         _undefined_ = 0 /* _undefined_*/
-        , AND = 0 /* AND*/
-        , OR = 0 /* OR*/
+        , AND = 1 /* AND*/
+        , OR = 2 /* OR*/
     };
 // WaitEventType Values array.
     static const WaitEventType WaitEventType_Values[] =

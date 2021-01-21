@@ -19,8 +19,8 @@ namespace amalthea
     enum class ChannelEventType
     {
         _all_ = 0 /* _all_*/
-        , send = 0 /* send*/
-        , receive = 0 /* receive*/
+        , send = 1 /* send*/
+        , receive = 2 /* receive*/
     };
 // ChannelEventType Values array.
     static const ChannelEventType ChannelEventType_Values[] =

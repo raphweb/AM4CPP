@@ -19,18 +19,18 @@ namespace amalthea
     enum class PortInterface
     {
         _undefined_ = 0 /* _undefined_*/
-        , custom = 0 /* custom*/
-        , CAN = 0 /* CAN*/
-        , Flexray = 0 /* Flexray*/
-        , LIN = 0 /* LIN*/
-        , MOST = 0 /* MOST*/
-        , Ethernet = 0 /* Ethernet*/
-        , SPI = 0 /* SPI*/
-        , I2C = 0 /* I2C*/
-        , AXI = 0 /* AXI*/
-        , AHB = 0 /* AHB*/
-        , APB = 0 /* APB*/
-        , SWR = 0 /* SWR*/
+        , custom = 1 /* custom*/
+        , CAN = 2 /* CAN*/
+        , Flexray = 3 /* Flexray*/
+        , LIN = 4 /* LIN*/
+        , MOST = 5 /* MOST*/
+        , Ethernet = 6 /* Ethernet*/
+        , SPI = 7 /* SPI*/
+        , I2C = 8 /* I2C*/
+        , AXI = 9 /* AXI*/
+        , AHB = 10 /* AHB*/
+        , APB = 11 /* APB*/
+        , SWR = 12 /* SWR*/
     };
 // PortInterface Values array.
     static const PortInterface PortInterface_Values[] =

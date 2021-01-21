@@ -19,15 +19,15 @@ namespace amalthea
     enum class StructureType
     {
         _undefined_ = 0 /* _undefined_*/
-        , System = 0 /* System*/
-        , ECU = 0 /* ECU*/
-        , Microcontroller = 0 /* Microcontroller*/
-        , SoC = 0 /* SoC*/
-        , Cluster = 0 /* Cluster*/
-        , Group = 0 /* Group*/
-        , Array = 0 /* Array*/
-        , Area = 0 /* Area*/
-        , Region = 0 /* Region*/
+        , System = 1 /* System*/
+        , ECU = 2 /* ECU*/
+        , Microcontroller = 3 /* Microcontroller*/
+        , SoC = 4 /* SoC*/
+        , Cluster = 5 /* Cluster*/
+        , Group = 6 /* Group*/
+        , Array = 7 /* Array*/
+        , Area = 8 /* Area*/
+        , Region = 9 /* Region*/
     };
 // StructureType Values array.
     static const StructureType StructureType_Values[] =

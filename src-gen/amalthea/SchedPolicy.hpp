@@ -19,9 +19,9 @@ namespace amalthea
     enum class SchedPolicy
     {
         _undefined_ = 0 /* _undefined_*/
-        , RoundRobin = 0 /* RoundRobin*/
-        , FCFS = 0 /* FCFS*/
-        , PriorityBased = 0 /* PriorityBased*/
+        , RoundRobin = 1 /* RoundRobin*/
+        , FCFS = 2 /* FCFS*/
+        , PriorityBased = 3 /* PriorityBased*/
     };
 // SchedPolicy Values array.
     static const SchedPolicy SchedPolicy_Values[] =

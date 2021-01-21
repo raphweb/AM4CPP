@@ -19,9 +19,9 @@ namespace amalthea
     enum class PuType
     {
         _undefined_ = 0 /* _undefined_*/
-        , GPU = 0 /* GPU*/
-        , CPU = 0 /* CPU*/
-        , Accelerator = 0 /* Accelerator*/
+        , GPU = 1 /* GPU*/
+        , CPU = 2 /* CPU*/
+        , Accelerator = 3 /* Accelerator*/
     };
 // PuType Values array.
     static const PuType PuType_Values[] =

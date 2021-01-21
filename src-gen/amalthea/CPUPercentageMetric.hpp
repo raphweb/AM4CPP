@@ -19,13 +19,13 @@ namespace amalthea
     enum class CPUPercentageMetric
     {
         _undefined_ = 0 /* _undefined_*/
-        , CPUBuffering = 0 /* CPUBuffering*/
-        , CPULoad = 0 /* CPULoad*/
-        , CPUParking = 0 /* CPUParking*/
-        , CPUPolling = 0 /* CPUPolling*/
-        , CPUReady = 0 /* CPUReady*/
-        , CPURunning = 0 /* CPURunning*/
-        , CPUWaiting = 0 /* CPUWaiting*/
+        , CPUBuffering = 1 /* CPUBuffering*/
+        , CPULoad = 2 /* CPULoad*/
+        , CPUParking = 3 /* CPUParking*/
+        , CPUPolling = 4 /* CPUPolling*/
+        , CPUReady = 5 /* CPUReady*/
+        , CPURunning = 6 /* CPURunning*/
+        , CPUWaiting = 7 /* CPUWaiting*/
     };
 // CPUPercentageMetric Values array.
     static const CPUPercentageMetric CPUPercentageMetric_Values[] =

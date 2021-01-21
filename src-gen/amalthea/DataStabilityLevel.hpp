@@ -19,10 +19,10 @@ namespace amalthea
     enum class DataStabilityLevel
     {
         _undefined_ = 0 /* _undefined_*/
-        , period = 0 /* period*/
-        , process = 0 /* process*/
-        , scheduleSection = 0 /* scheduleSection*/
-        , runnable = 0 /* runnable*/
+        , period = 1 /* period*/
+        , process = 2 /* process*/
+        , scheduleSection = 3 /* scheduleSection*/
+        , runnable = 4 /* runnable*/
     };
 // DataStabilityLevel Values array.
     static const DataStabilityLevel DataStabilityLevel_Values[] =

@@ -19,9 +19,9 @@ namespace amalthea
     enum class SemaphoreAccessEnum
     {
         _undefined_ = 0 /* _undefined_*/
-        , request = 0 /* request*/
-        , exclusive = 0 /* exclusive*/
-        , release = 0 /* release*/
+        , request = 1 /* request*/
+        , exclusive = 2 /* exclusive*/
+        , release = 3 /* release*/
     };
 // SemaphoreAccessEnum Values array.
     static const SemaphoreAccessEnum SemaphoreAccessEnum_Values[] =

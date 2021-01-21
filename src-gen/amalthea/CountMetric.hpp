@@ -19,13 +19,13 @@ namespace amalthea
     enum class CountMetric
     {
         _undefined_ = 0 /* _undefined_*/
-        , Activations = 0 /* Activations*/
-        , BoundedMigrations = 0 /* BoundedMigrations*/
-        , CacheHit = 0 /* CacheHit*/
-        , CacheMiss = 0 /* CacheMiss*/
-        , FullMigrations = 0 /* FullMigrations*/
-        , MtaLimitExceeding = 0 /* MtaLimitExceeding*/
-        , Preemptions = 0 /* Preemptions*/
+        , Activations = 1 /* Activations*/
+        , BoundedMigrations = 2 /* BoundedMigrations*/
+        , CacheHit = 3 /* CacheHit*/
+        , CacheMiss = 4 /* CacheMiss*/
+        , FullMigrations = 5 /* FullMigrations*/
+        , MtaLimitExceeding = 6 /* MtaLimitExceeding*/
+        , Preemptions = 7 /* Preemptions*/
     };
 // CountMetric Values array.
     static const CountMetric CountMetric_Values[] =

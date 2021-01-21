@@ -40,7 +40,7 @@ void RunnableGroup::_initialize()
 
 // EObject
 ::ecore::EJavaObject RunnableGroup::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -51,7 +51,7 @@ void RunnableGroup::_initialize()
 }
 
 void RunnableGroup::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -89,7 +89,7 @@ void RunnableGroup::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void RunnableGroup::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -101,7 +101,7 @@ void RunnableGroup::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void RunnableGroup::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

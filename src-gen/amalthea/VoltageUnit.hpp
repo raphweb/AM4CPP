@@ -19,9 +19,9 @@ namespace amalthea
     enum class VoltageUnit
     {
         _undefined_ = 0 /* _undefined_*/
-        , uV = 0 /* uV*/
-        , mV = 0 /* mV*/
-        , V = 0 /* V*/
+        , uV = 1 /* uV*/
+        , mV = 2 /* mV*/
+        , V = 3 /* V*/
     };
 // VoltageUnit Values array.
     static const VoltageUnit VoltageUnit_Values[] =

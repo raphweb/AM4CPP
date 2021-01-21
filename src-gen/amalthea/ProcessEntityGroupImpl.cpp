@@ -46,7 +46,7 @@ void ProcessEntityGroup::_initialize()
 
 // EObject
 ::ecore::EJavaObject ProcessEntityGroup::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -66,7 +66,7 @@ void ProcessEntityGroup::_initialize()
 }
 
 void ProcessEntityGroup::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -126,7 +126,7 @@ void ProcessEntityGroup::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void ProcessEntityGroup::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -146,7 +146,7 @@ void ProcessEntityGroup::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void ProcessEntityGroup::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

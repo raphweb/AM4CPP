@@ -19,8 +19,8 @@ namespace amalthea
     enum class PortType
     {
         _undefined_ = 0 /* _undefined_*/
-        , initiator = 0 /* initiator*/
-        , responder = 0 /* responder*/
+        , initiator = 1 /* initiator*/
+        , responder = 2 /* responder*/
     };
 // PortType Values array.
     static const PortType PortType_Values[] =

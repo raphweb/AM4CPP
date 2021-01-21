@@ -19,23 +19,23 @@ namespace amalthea
     enum class TimeMetric
     {
         _undefined_ = 0 /* _undefined_*/
-        , ActivateToActivate = 0 /* ActivateToActivate*/
-        , CoreExecutionTime = 0 /* CoreExecutionTime*/
-        , EndToEnd = 0 /* EndToEnd*/
-        , EndToStart = 0 /* EndToStart*/
-        , GrossExecutionTime = 0 /* GrossExecutionTime*/
-        , Lateness = 0 /* Lateness*/
-        , MemoryAccessTime = 0 /* MemoryAccessTime*/
-        , NetExecutionTime = 0 /* NetExecutionTime*/
-        , OsOverhead = 0 /* OsOverhead*/
-        , ParkingTime = 0 /* ParkingTime*/
-        , PollingTime = 0 /* PollingTime*/
-        , ReadyTime = 0 /* ReadyTime*/
-        , ResponseTime = 0 /* ResponseTime*/
-        , RunningTime = 0 /* RunningTime*/
-        , StartDelay = 0 /* StartDelay*/
-        , StartToStart = 0 /* StartToStart*/
-        , WaitingTime = 0 /* WaitingTime*/
+        , ActivateToActivate = 1 /* ActivateToActivate*/
+        , CoreExecutionTime = 2 /* CoreExecutionTime*/
+        , EndToEnd = 3 /* EndToEnd*/
+        , EndToStart = 4 /* EndToStart*/
+        , GrossExecutionTime = 5 /* GrossExecutionTime*/
+        , Lateness = 6 /* Lateness*/
+        , MemoryAccessTime = 7 /* MemoryAccessTime*/
+        , NetExecutionTime = 8 /* NetExecutionTime*/
+        , OsOverhead = 9 /* OsOverhead*/
+        , ParkingTime = 10 /* ParkingTime*/
+        , PollingTime = 11 /* PollingTime*/
+        , ReadyTime = 12 /* ReadyTime*/
+        , ResponseTime = 13 /* ResponseTime*/
+        , RunningTime = 14 /* RunningTime*/
+        , StartDelay = 15 /* StartDelay*/
+        , StartToStart = 16 /* StartToStart*/
+        , WaitingTime = 17 /* WaitingTime*/
     };
 // TimeMetric Values array.
     static const TimeMetric TimeMetric_Values[] =

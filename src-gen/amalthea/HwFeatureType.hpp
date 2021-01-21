@@ -19,9 +19,9 @@ namespace amalthea
     enum class HwFeatureType
     {
         _undefined_ = 0 /* _undefined_*/
-        , performance = 0 /* performance*/
-        , power = 0 /* power*/
-        , performance_and_power = 0 /* performance_and_power*/
+        , performance = 1 /* performance*/
+        , power = 2 /* power*/
+        , performance_and_power = 3 /* performance_and_power*/
     };
 // HwFeatureType Values array.
     static const HwFeatureType HwFeatureType_Values[] =

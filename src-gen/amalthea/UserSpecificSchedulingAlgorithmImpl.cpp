@@ -50,7 +50,7 @@ void UserSpecificSchedulingAlgorithm::_initialize()
 
 // EObject
 ::ecore::EJavaObject UserSpecificSchedulingAlgorithm::eGet(
-        ::ecore::EInt _featureID, ::ecore::EBoolean _resolve)
+        ::ecore::EInt _featureID, [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -71,7 +71,7 @@ void UserSpecificSchedulingAlgorithm::_initialize()
 }
 
 void UserSpecificSchedulingAlgorithm::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -136,7 +136,7 @@ void UserSpecificSchedulingAlgorithm::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void UserSpecificSchedulingAlgorithm::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -156,7 +156,7 @@ void UserSpecificSchedulingAlgorithm::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void UserSpecificSchedulingAlgorithm::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

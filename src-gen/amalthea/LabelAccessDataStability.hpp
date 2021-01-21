@@ -19,11 +19,11 @@ namespace amalthea
     enum class LabelAccessDataStability
     {
         _undefined_ = 0 /* _undefined_*/
-        , inherited = 0 /* inherited*/
-        , noProtection = 0 /* noProtection*/
-        , automaticProtection = 0 /* automaticProtection*/
-        , customProtection = 0 /* customProtection*/
-        , handledByModelElements = 0 /* handledByModelElements*/
+        , inherited = 1 /* inherited*/
+        , noProtection = 2 /* noProtection*/
+        , automaticProtection = 3 /* automaticProtection*/
+        , customProtection = 4 /* customProtection*/
+        , handledByModelElements = 5 /* handledByModelElements*/
     };
 // LabelAccessDataStability Values array.
     static const LabelAccessDataStability LabelAccessDataStability_Values[] =

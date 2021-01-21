@@ -19,8 +19,8 @@ namespace amalthea
     enum class SynchronizationType
     {
         _undefined_ = 0 /* _undefined_*/
-        , Stimulus = 0 /* Stimulus*/
-        , Response = 0 /* Response*/
+        , Stimulus = 1 /* Stimulus*/
+        , Response = 2 /* Response*/
     };
 // SynchronizationType Values array.
     static const SynchronizationType SynchronizationType_Values[] =

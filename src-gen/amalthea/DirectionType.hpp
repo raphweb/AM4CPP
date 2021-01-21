@@ -19,9 +19,9 @@ namespace amalthea
     enum class DirectionType
     {
         _undefined_ = 0 /* _undefined_*/
-        , in = 0 /* in*/
-        , out = 0 /* out*/
-        , inout = 0 /* inout*/
+        , in = 1 /* in*/
+        , out = 2 /* out*/
+        , inout = 3 /* inout*/
     };
 // DirectionType Values array.
     static const DirectionType DirectionType_Values[] =

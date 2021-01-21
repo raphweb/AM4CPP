@@ -19,8 +19,8 @@ namespace amalthea
     enum class ISRCategory
     {
         _undefined_ = 0 /* _undefined_*/
-        , CATEGORY_1 = 0 /* CATEGORY_1*/
-        , CATEGORY_2 = 0 /* CATEGORY_2*/
+        , CATEGORY_1 = 1 /* CATEGORY_1*/
+        , CATEGORY_2 = 2 /* CATEGORY_2*/
     };
 // ISRCategory Values array.
     static const ISRCategory ISRCategory_Values[] =

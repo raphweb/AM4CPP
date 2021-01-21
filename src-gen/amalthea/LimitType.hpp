@@ -19,8 +19,8 @@ namespace amalthea
     enum class LimitType
     {
         _undefined_ = 0 /* _undefined_*/
-        , UpperLimit = 0 /* UpperLimit*/
-        , LowerLimit = 0 /* LowerLimit*/
+        , UpperLimit = 1 /* UpperLimit*/
+        , LowerLimit = 2 /* LowerLimit*/
     };
 // LimitType Values array.
     static const LimitType LimitType_Values[] =

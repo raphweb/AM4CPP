@@ -19,10 +19,10 @@ namespace amalthea
     enum class Severity
     {
         _undefined_ = 0 /* _undefined_*/
-        , Cosmetic = 0 /* Cosmetic*/
-        , Minor = 0 /* Minor*/
-        , Major = 0 /* Major*/
-        , Critical = 0 /* Critical*/
+        , Cosmetic = 1 /* Cosmetic*/
+        , Minor = 2 /* Minor*/
+        , Major = 3 /* Major*/
+        , Critical = 4 /* Critical*/
     };
 // Severity Values array.
     static const Severity Severity_Values[] =

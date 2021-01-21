@@ -43,7 +43,7 @@ void FixedPriorityPreemptiveWithBudgetEnforcement::_initialize()
 
 // EObject
 ::ecore::EJavaObject FixedPriorityPreemptiveWithBudgetEnforcement::eGet(
-        ::ecore::EInt _featureID, ::ecore::EBoolean _resolve)
+        ::ecore::EInt _featureID, [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -59,7 +59,8 @@ void FixedPriorityPreemptiveWithBudgetEnforcement::_initialize()
 }
 
 void FixedPriorityPreemptiveWithBudgetEnforcement::eSet(
-        ::ecore::EInt _featureID, ::ecore::EJavaObject const &_newValue)
+        ::ecore::EInt _featureID,
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -111,7 +112,8 @@ void FixedPriorityPreemptiveWithBudgetEnforcement::eUnset(
 /** Set the local end of a reference with an EOpposite property.
  */
 void FixedPriorityPreemptiveWithBudgetEnforcement::_inverseAdd(
-        ::ecore::EInt _featureID, ::ecore::EJavaObject const &_newValue)
+        ::ecore::EInt _featureID,
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -127,7 +129,8 @@ void FixedPriorityPreemptiveWithBudgetEnforcement::_inverseAdd(
 /** Unset the local end of a reference with an EOpposite property.
  */
 void FixedPriorityPreemptiveWithBudgetEnforcement::_inverseRemove(
-        ::ecore::EInt _featureID, ::ecore::EJavaObject const &_oldValue)
+        ::ecore::EInt _featureID,
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

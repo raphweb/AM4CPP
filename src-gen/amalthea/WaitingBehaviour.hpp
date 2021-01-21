@@ -19,8 +19,8 @@ namespace amalthea
     enum class WaitingBehaviour
     {
         _undefined_ = 0 /* _undefined_*/
-        , active = 0 /* active*/
-        , passive = 0 /* passive*/
+        , active = 1 /* active*/
+        , passive = 2 /* passive*/
     };
 // WaitingBehaviour Values array.
     static const WaitingBehaviour WaitingBehaviour_Values[] =

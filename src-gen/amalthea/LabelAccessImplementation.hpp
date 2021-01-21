@@ -19,31 +19,32 @@ namespace amalthea
     enum class LabelAccessImplementation
     {
         _undefined_ = 0 /* _undefined_*/
-        ,
-explicit = 0 /* explicit*/
-, implicit = 0 /* implicit*/
-, timed = 0 /* timed*/
-};
+        , _explicit = 1 /* explicit*/
+        , implicit = 2 /* implicit*/
+        , timed = 3 /* timed*/
+    };
 // LabelAccessImplementation Values array.
-static const LabelAccessImplementation LabelAccessImplementation_Values[] =
-{
-LabelAccessImplementation::_undefined_ , LabelAccessImplementation::explicit , LabelAccessImplementation::implicit , LabelAccessImplementation::timed}
-;
-inline const std::string getLiteral(LabelAccessImplementation e)
-{
-switch (e)
-{
-case LabelAccessImplementation::_undefined_:
-    return "_undefined_";
-case LabelAccessImplementation::explicit: return "explicit";
-case LabelAccessImplementation::implicit:
-    return "implicit";
-case LabelAccessImplementation::timed:
-    return "timed";
-}
-return "";
-}
-;
+    static const LabelAccessImplementation LabelAccessImplementation_Values[] =
+    { LabelAccessImplementation::_undefined_,
+            LabelAccessImplementation::_explicit,
+            LabelAccessImplementation::implicit,
+            LabelAccessImplementation::timed };
+    inline const std::string getLiteral(LabelAccessImplementation e)
+    {
+        switch (e)
+        {
+        case LabelAccessImplementation::_undefined_:
+            return "_undefined_";
+        case LabelAccessImplementation::_explicit:
+            return "explicit";
+        case LabelAccessImplementation::implicit:
+            return "implicit";
+        case LabelAccessImplementation::timed:
+            return "timed";
+        }
+        return "";
+    }
+    ;
 } // amalthea
 
 #endif

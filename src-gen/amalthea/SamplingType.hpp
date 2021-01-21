@@ -18,37 +18,38 @@ namespace amalthea
 
     enum class SamplingType
     {
-default = 0 /* default*/
-, BestCase = 0 /* BestCase*/
-, WorstCase = 0 /* WorstCase*/
-, AverageCase = 0 /* AverageCase*/
-, CornerCase = 0 /* CornerCase*/
-, Uniform = 0 /* Uniform*/
-};
+        _default = 0 /* default*/
+        , BestCase = 1 /* BestCase*/
+        , WorstCase = 2 /* WorstCase*/
+        , AverageCase = 3 /* AverageCase*/
+        , CornerCase = 4 /* CornerCase*/
+        , Uniform = 5 /* Uniform*/
+    };
 // SamplingType Values array.
-static const SamplingType SamplingType_Values[] =
-{
-SamplingType::default , SamplingType::BestCase , SamplingType::WorstCase , SamplingType::AverageCase , SamplingType::CornerCase , SamplingType::Uniform}
-;
-inline const std::string getLiteral(SamplingType e)
-{
-switch (e)
-{
-case SamplingType::default: return "default";
-case SamplingType::BestCase:
-return "BestCase";
-case SamplingType::WorstCase:
-return "WorstCase";
-case SamplingType::AverageCase:
-return "AverageCase";
-case SamplingType::CornerCase:
-return "CornerCase";
-case SamplingType::Uniform:
-return "Uniform";
-}
-return "";
-}
-;
+    static const SamplingType SamplingType_Values[] =
+    { SamplingType::_default, SamplingType::BestCase, SamplingType::WorstCase,
+            SamplingType::AverageCase, SamplingType::CornerCase,
+            SamplingType::Uniform };
+    inline const std::string getLiteral(SamplingType e)
+    {
+        switch (e)
+        {
+        case SamplingType::_default:
+            return "default";
+        case SamplingType::BestCase:
+            return "BestCase";
+        case SamplingType::WorstCase:
+            return "WorstCase";
+        case SamplingType::AverageCase:
+            return "AverageCase";
+        case SamplingType::CornerCase:
+            return "CornerCase";
+        case SamplingType::Uniform:
+            return "Uniform";
+        }
+        return "";
+    }
+    ;
 } // amalthea
 
 #endif

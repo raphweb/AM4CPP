@@ -19,9 +19,9 @@ namespace amalthea
     enum class AccessPrecedenceType
     {
         _undefined_ = 0 /* _undefined_*/
-        , defaultWR = 0 /* defaultWR*/
-        , ignoreWR = 0 /* ignoreWR*/
-        , enforceRW = 0 /* enforceRW*/
+        , defaultWR = 1 /* defaultWR*/
+        , ignoreWR = 2 /* ignoreWR*/
+        , enforceRW = 3 /* enforceRW*/
     };
 // AccessPrecedenceType Values array.
     static const AccessPrecedenceType AccessPrecedenceType_Values[] =

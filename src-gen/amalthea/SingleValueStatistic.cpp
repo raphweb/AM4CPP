@@ -27,7 +27,7 @@
 using namespace ::amalthea;
 
 // Default constructor
-SingleValueStatistic::SingleValueStatistic() : m_value(0f)
+SingleValueStatistic::SingleValueStatistic() : m_value()
 {
 
     /*PROTECTED REGION ID(SingleValueStatisticImpl__SingleValueStatisticImpl) START*/

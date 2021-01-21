@@ -19,8 +19,8 @@ namespace amalthea
     enum class LabelEventType
     {
         _all_ = 0 /* _all_*/
-        , read = 0 /* read*/
-        , write = 0 /* write*/
+        , read = 1 /* read*/
+        , write = 2 /* write*/
     };
 // LabelEventType Values array.
     static const LabelEventType LabelEventType_Values[] =

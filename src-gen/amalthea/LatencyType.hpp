@@ -19,8 +19,8 @@ namespace amalthea
     enum class LatencyType
     {
         _undefined_ = 0 /* _undefined_*/
-        , Age = 0 /* Age*/
-        , Reaction = 0 /* Reaction*/
+        , Age = 1 /* Age*/
+        , Reaction = 2 /* Reaction*/
     };
 // LatencyType Values array.
     static const LatencyType LatencyType_Values[] =

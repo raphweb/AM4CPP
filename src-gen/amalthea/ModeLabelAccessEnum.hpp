@@ -19,10 +19,10 @@ namespace amalthea
     enum class ModeLabelAccessEnum
     {
         _undefined_ = 0 /* _undefined_*/
-        , read = 0 /* read*/
-        , set = 0 /* set*/
-        , increment = 0 /* increment*/
-        , decrement = 0 /* decrement*/
+        , read = 1 /* read*/
+        , set = 2 /* set*/
+        , increment = 3 /* increment*/
+        , decrement = 4 /* decrement*/
     };
 // ModeLabelAccessEnum Values array.
     static const ModeLabelAccessEnum ModeLabelAccessEnum_Values[] =

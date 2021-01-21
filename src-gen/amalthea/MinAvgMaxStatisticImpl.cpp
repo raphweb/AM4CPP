@@ -53,7 +53,7 @@ void MinAvgMaxStatistic::_initialize()
 
 // EObject
 ::ecore::EJavaObject MinAvgMaxStatistic::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -80,7 +80,7 @@ void MinAvgMaxStatistic::_initialize()
 }
 
 void MinAvgMaxStatistic::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -123,7 +123,8 @@ void MinAvgMaxStatistic::eSet(::ecore::EInt _featureID,
     }
     case ::amalthea::AmaltheaPackage::MINAVGMAXSTATISTIC__AVG:
     {
-        return m_avg != 0f;
+        return ::ecorecpp::mapping::set_traits < ::ecore::EFloat
+                > ::is_set(m_avg);
     }
     case ::amalthea::AmaltheaPackage::MINAVGMAXSTATISTIC__MAX:
     {
@@ -154,7 +155,7 @@ void MinAvgMaxStatistic::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void MinAvgMaxStatistic::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -166,7 +167,7 @@ void MinAvgMaxStatistic::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void MinAvgMaxStatistic::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

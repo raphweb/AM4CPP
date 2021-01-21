@@ -19,8 +19,8 @@ namespace amalthea
     enum class CurveType
     {
         _undefined_ = 0 /* _undefined_*/
-        , sine = 0 /* sine*/
-        , triangle = 0 /* triangle*/
+        , sine = 1 /* sine*/
+        , triangle = 2 /* triangle*/
     };
 // CurveType Values array.
     static const CurveType CurveType_Values[] =

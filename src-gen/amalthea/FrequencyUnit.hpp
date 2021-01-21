@@ -19,10 +19,10 @@ namespace amalthea
     enum class FrequencyUnit
     {
         _undefined_ = 0 /* _undefined_*/
-        , Hz = 0 /* Hz*/
-        , kHz = 0 /* kHz*/
-        , MHz = 0 /* MHz*/
-        , GHz = 0 /* GHz*/
+        , Hz = 1 /* Hz*/
+        , kHz = 2 /* kHz*/
+        , MHz = 3 /* MHz*/
+        , GHz = 4 /* GHz*/
     };
 // FrequencyUnit Values array.
     static const FrequencyUnit FrequencyUnit_Values[] =

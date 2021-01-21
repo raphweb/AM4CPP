@@ -19,13 +19,13 @@ namespace amalthea
     enum class PercentageMetric
     {
         _undefined_ = 0 /* _undefined_*/
-        , CacheHitRatio = 0 /* CacheHitRatio*/
-        , CacheMissRatio = 0 /* CacheMissRatio*/
-        , CoreExecutionTimeRelative = 0 /* CoreExecutionTimeRelative*/
-        , MemoryAccessTimeRelative = 0 /* MemoryAccessTimeRelative*/
-        , NormalizedLateness = 0 /* NormalizedLateness*/
-        , NormalizedResponseTime = 0 /* NormalizedResponseTime*/
-        , OsOverheadRelative = 0 /* OsOverheadRelative*/
+        , CacheHitRatio = 1 /* CacheHitRatio*/
+        , CacheMissRatio = 2 /* CacheMissRatio*/
+        , CoreExecutionTimeRelative = 3 /* CoreExecutionTimeRelative*/
+        , MemoryAccessTimeRelative = 4 /* MemoryAccessTimeRelative*/
+        , NormalizedLateness = 5 /* NormalizedLateness*/
+        , NormalizedResponseTime = 6 /* NormalizedResponseTime*/
+        , OsOverheadRelative = 7 /* OsOverheadRelative*/
     };
 // PercentageMetric Values array.
     static const PercentageMetric PercentageMetric_Values[] =

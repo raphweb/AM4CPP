@@ -19,24 +19,24 @@ namespace amalthea
     enum class DataRateUnit
     {
         _undefined_ = 0 /* _undefined_*/
-        , bitPerSecond = 0 /* bitPerSecond*/
-        , kbitPerSecond = 0 /* kbitPerSecond*/
-        , MbitPerSecond = 0 /* MbitPerSecond*/
-        , GbitPerSecond = 0 /* GbitPerSecond*/
-        , TbitPerSecond = 0 /* TbitPerSecond*/
-        , KibitPerSecond = 0 /* KibitPerSecond*/
-        , MibitPerSecond = 0 /* MibitPerSecond*/
-        , GibitPerSecond = 0 /* GibitPerSecond*/
-        , TibitPerSecond = 0 /* TibitPerSecond*/
-        , BPerSecond = 0 /* BPerSecond*/
-        , kBPerSecond = 0 /* kBPerSecond*/
-        , MBPerSecond = 0 /* MBPerSecond*/
-        , GBPerSecond = 0 /* GBPerSecond*/
-        , TBPerSecond = 0 /* TBPerSecond*/
-        , KiBPerSecond = 0 /* KiBPerSecond*/
-        , MiBPerSecond = 0 /* MiBPerSecond*/
-        , GiBPerSecond = 0 /* GiBPerSecond*/
-        , TiBPerSecond = 0 /* TiBPerSecond*/
+        , bitPerSecond = 1 /* bitPerSecond*/
+        , kbitPerSecond = 2 /* kbitPerSecond*/
+        , MbitPerSecond = 3 /* MbitPerSecond*/
+        , GbitPerSecond = 4 /* GbitPerSecond*/
+        , TbitPerSecond = 5 /* TbitPerSecond*/
+        , KibitPerSecond = 6 /* KibitPerSecond*/
+        , MibitPerSecond = 7 /* MibitPerSecond*/
+        , GibitPerSecond = 8 /* GibitPerSecond*/
+        , TibitPerSecond = 9 /* TibitPerSecond*/
+        , BPerSecond = 10 /* BPerSecond*/
+        , kBPerSecond = 11 /* kBPerSecond*/
+        , MBPerSecond = 12 /* MBPerSecond*/
+        , GBPerSecond = 13 /* GBPerSecond*/
+        , TBPerSecond = 14 /* TBPerSecond*/
+        , KiBPerSecond = 15 /* KiBPerSecond*/
+        , MiBPerSecond = 16 /* MiBPerSecond*/
+        , GiBPerSecond = 17 /* GiBPerSecond*/
+        , TiBPerSecond = 18 /* TiBPerSecond*/
     };
 // DataRateUnit Values array.
     static const DataRateUnit DataRateUnit_Values[] =

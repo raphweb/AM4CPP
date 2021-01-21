@@ -42,7 +42,7 @@ void SingleValueStatistic::_initialize()
 
 // EObject
 ::ecore::EJavaObject SingleValueStatistic::eGet(::ecore::EInt _featureID,
-        ::ecore::EBoolean _resolve)
+        [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -59,7 +59,7 @@ void SingleValueStatistic::_initialize()
 }
 
 void SingleValueStatistic::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -82,7 +82,8 @@ void SingleValueStatistic::eSet(::ecore::EInt _featureID,
     {
     case ::amalthea::AmaltheaPackage::SINGLEVALUESTATISTIC__VALUE:
     {
-        return m_value != 0f;
+        return ::ecorecpp::mapping::set_traits < ::ecore::EFloat
+                > ::is_set(m_value);
     }
     }
     throw std::runtime_error(
@@ -109,7 +110,7 @@ void SingleValueStatistic::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void SingleValueStatistic::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -121,7 +122,7 @@ void SingleValueStatistic::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void SingleValueStatistic::_inverseRemove(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_oldValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

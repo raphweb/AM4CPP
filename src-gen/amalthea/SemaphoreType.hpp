@@ -19,9 +19,9 @@ namespace amalthea
     enum class SemaphoreType
     {
         _undefined_ = 0 /* _undefined_*/
-        , CountingSemaphore = 0 /* CountingSemaphore*/
-        , Resource = 0 /* Resource*/
-        , Spinlock = 0 /* Spinlock*/
+        , CountingSemaphore = 1 /* CountingSemaphore*/
+        , Resource = 2 /* Resource*/
+        , Spinlock = 3 /* Spinlock*/
     };
 // SemaphoreType Values array.
     static const SemaphoreType SemaphoreType_Values[] =

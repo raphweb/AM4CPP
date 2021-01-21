@@ -19,8 +19,8 @@ namespace amalthea
     enum class ComponentEventType
     {
         _all_ = 0 /* _all_*/
-        , start = 0 /* start*/
-        , end = 0 /* end*/
+        , start = 1 /* start*/
+        , end = 2 /* end*/
     };
 // ComponentEventType Values array.
     static const ComponentEventType ComponentEventType_Values[] =

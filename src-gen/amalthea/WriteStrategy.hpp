@@ -19,9 +19,9 @@ namespace amalthea
     enum class WriteStrategy
     {
         _undefined_ = 0 /* _undefined_*/
-        , none = 0 /* none*/
-        , writeback = 0 /* writeback*/
-        , writethrough = 0 /* writethrough*/
+        , none = 1 /* none*/
+        , writeback = 2 /* writeback*/
+        , writethrough = 3 /* writethrough*/
     };
 // WriteStrategy Values array.
     static const WriteStrategy WriteStrategy_Values[] =

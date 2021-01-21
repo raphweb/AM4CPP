@@ -19,9 +19,9 @@ namespace amalthea
     enum class MemoryAddressMappingType
     {
         _undefined_ = 0 /* _undefined_*/
-        , none = 0 /* none*/
-        , address = 0 /* address*/
-        , offset = 0 /* offset*/
+        , none = 1 /* none*/
+        , address = 2 /* address*/
+        , offset = 3 /* offset*/
     };
 // MemoryAddressMappingType Values array.
     static const MemoryAddressMappingType MemoryAddressMappingType_Values[] =

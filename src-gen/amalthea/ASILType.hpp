@@ -19,11 +19,11 @@ namespace amalthea
     enum class ASILType
     {
         _undefined_ = 0 /* _undefined_*/
-        , D = 0 /* D*/
-        , C = 0 /* C*/
-        , B = 0 /* B*/
-        , A = 0 /* A*/
-        , QM = 0 /* QM*/
+        , D = 1 /* D*/
+        , C = 2 /* C*/
+        , B = 3 /* B*/
+        , A = 4 /* A*/
+        , QM = 5 /* QM*/
     };
 // ASILType Values array.
     static const ASILType ASILType_Values[] =

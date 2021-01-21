@@ -27,7 +27,7 @@
 using namespace ::amalthea;
 
 // Default constructor
-MinAvgMaxStatistic::MinAvgMaxStatistic() : m_min(0), m_avg(0f), m_max(0)
+MinAvgMaxStatistic::MinAvgMaxStatistic() : m_min(0), m_avg(), m_max(0)
 {
 
     /*PROTECTED REGION ID(MinAvgMaxStatisticImpl__MinAvgMaxStatisticImpl) START*/

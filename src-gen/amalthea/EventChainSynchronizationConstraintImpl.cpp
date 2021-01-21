@@ -47,7 +47,7 @@ void EventChainSynchronizationConstraint::_initialize()
 
 // EObject
 ::ecore::EJavaObject EventChainSynchronizationConstraint::eGet(
-        ::ecore::EInt _featureID, ::ecore::EBoolean _resolve)
+        ::ecore::EInt _featureID, [[maybe_unused]] ::ecore::EBoolean _resolve)
 {
     ::ecore::EJavaObject _any;
     switch (_featureID)
@@ -83,7 +83,7 @@ void EventChainSynchronizationConstraint::_initialize()
 }
 
 void EventChainSynchronizationConstraint::eSet(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -186,7 +186,7 @@ void EventChainSynchronizationConstraint::eUnset(::ecore::EInt _featureID)
 /** Set the local end of a reference with an EOpposite property.
  */
 void EventChainSynchronizationConstraint::_inverseAdd(::ecore::EInt _featureID,
-        ::ecore::EJavaObject const &_newValue)
+        [[maybe_unused]] ::ecore::EJavaObject const &_newValue)
 {
     switch (_featureID)
     {
@@ -210,7 +210,8 @@ void EventChainSynchronizationConstraint::_inverseAdd(::ecore::EInt _featureID,
 /** Unset the local end of a reference with an EOpposite property.
  */
 void EventChainSynchronizationConstraint::_inverseRemove(
-        ::ecore::EInt _featureID, ::ecore::EJavaObject const &_oldValue)
+        ::ecore::EInt _featureID,
+        [[maybe_unused]] ::ecore::EJavaObject const &_oldValue)
 {
     switch (_featureID)
     {

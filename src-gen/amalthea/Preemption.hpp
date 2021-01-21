@@ -19,9 +19,9 @@ namespace amalthea
     enum class Preemption
     {
         _undefined_ = 0 /* _undefined_*/
-        , preemptive = 0 /* preemptive*/
-        , cooperative = 0 /* cooperative*/
-        , non_preemptive = 0 /* non_preemptive*/
+        , preemptive = 1 /* preemptive*/
+        , cooperative = 2 /* cooperative*/
+        , non_preemptive = 3 /* non_preemptive*/
     };
 // Preemption Values array.
     static const Preemption Preemption_Values[] =

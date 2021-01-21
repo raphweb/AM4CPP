@@ -19,11 +19,11 @@ namespace amalthea
     enum class TimeUnit
     {
         _undefined_ = 0 /* _undefined_*/
-        , s = 0 /* s*/
-        , ms = 0 /* ms*/
-        , us = 0 /* us*/
-        , ns = 0 /* ns*/
-        , ps = 0 /* ps*/
+        , s = 1 /* s*/
+        , ms = 2 /* ms*/
+        , us = 3 /* us*/
+        , ns = 4 /* ns*/
+        , ps = 5 /* ps*/
     };
 // TimeUnit Values array.
     static const TimeUnit TimeUnit_Values[] =

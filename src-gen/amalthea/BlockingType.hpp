@@ -19,9 +19,9 @@ namespace amalthea
     enum class BlockingType
     {
         _undefined_ = 0 /* _undefined_*/
-        , active_wait = 0 /* active_wait*/
-        , passive_wait = 0 /* passive_wait*/
-        , non_blocking = 0 /* non_blocking*/
+        , active_wait = 1 /* active_wait*/
+        , passive_wait = 2 /* passive_wait*/
+        , non_blocking = 3 /* non_blocking*/
     };
 // BlockingType Values array.
     static const BlockingType BlockingType_Values[] =

@@ -19,8 +19,8 @@ namespace amalthea
     enum class AccessMultiplicity
     {
         _undefined_ = 0 /* _undefined_*/
-        , singleAccess = 0 /* singleAccess*/
-        , multipleAccesses = 0 /* multipleAccesses*/
+        , singleAccess = 1 /* singleAccess*/
+        , multipleAccesses = 2 /* multipleAccesses*/
     };
 // AccessMultiplicity Values array.
     static const AccessMultiplicity AccessMultiplicity_Values[] =

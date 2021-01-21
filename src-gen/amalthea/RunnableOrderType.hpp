@@ -19,10 +19,10 @@ namespace amalthea
     enum class RunnableOrderType
     {
         _undefined_ = 0 /* _undefined_*/
-        , successor = 0 /* successor*/
-        , immediateSuccessorStartSequence = 0 /* immediateSuccessorStartSequence*/
-        , immediateSuccessorAnySequence = 0 /* immediateSuccessorAnySequence*/
-        , immediateSuccessorEndSequence = 0 /* immediateSuccessorEndSequence*/
+        , successor = 1 /* successor*/
+        , immediateSuccessorStartSequence = 2 /* immediateSuccessorStartSequence*/
+        , immediateSuccessorAnySequence = 3 /* immediateSuccessorAnySequence*/
+        , immediateSuccessorEndSequence = 4 /* immediateSuccessorEndSequence*/
     };
 // RunnableOrderType Values array.
     static const RunnableOrderType RunnableOrderType_Values[] =

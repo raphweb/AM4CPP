@@ -19,9 +19,9 @@ namespace amalthea
     enum class CacheType
     {
         _undefined_ = 0 /* _undefined_*/
-        , instruction = 0 /* instruction*/
-        , data = 0 /* data*/
-        , unified = 0 /* unified*/
+        , instruction = 1 /* instruction*/
+        , data = 2 /* data*/
+        , unified = 3 /* unified*/
     };
 // CacheType Values array.
     static const CacheType CacheType_Values[] =

@@ -19,10 +19,10 @@ namespace amalthea
     enum class OrderType
     {
         _undefined_ = 0 /* _undefined_*/
-        , order = 0 /* order*/
-        , directOrder = 0 /* directOrder*/
-        , startSequence = 0 /* startSequence*/
-        , endSequence = 0 /* endSequence*/
+        , order = 1 /* order*/
+        , directOrder = 2 /* directOrder*/
+        , startSequence = 3 /* startSequence*/
+        , endSequence = 4 /* endSequence*/
     };
 // OrderType Values array.
     static const OrderType OrderType_Values[] =
