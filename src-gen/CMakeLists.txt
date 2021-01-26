@@ -10,7 +10,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-FIND_PACKAGE(EMF4CPP REQUIRED emf4cpp-ecore emf4cpp-ecorecpp)
+#FIND_PACKAGE(EMF4CPP REQUIRED emf4cpp-ecore emf4cpp-ecorecpp)
 if(NOT DEFINED CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif(NOT DEFINED CMAKE_BUILD_TYPE)

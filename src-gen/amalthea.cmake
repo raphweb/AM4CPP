@@ -1653,17 +1653,32 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/amalthea/ASILType.hpp DESTINATION incl
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/amalthea/dllAmalthea.hpp DESTINATION include/emf4cpp/amalthea)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR} libs/emf4cpp/include/emf4cpp libs/emf4cpp/include/emf4cpp)
-# link_directories(libs/emf4cpp/lib)
+#include_directories(${CMAKE_CURRENT_SOURCE_DIR} libs/emf4cpp/include/emf4cpp libs/emf4cpp/include/emf4cpp)
+#link_directories(libs/emf4cpp/lib)
 
-add_library(${PROJECT_NAME}-amalthea SHARED ${amalthea_HEADERS} ${amalthea_SOURCES})
-target_include_directories(${PROJECT_NAME}-amalthea PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-        $<INSTALL_INTERFACE:include/emf4cpp>
-    )
+if(AMALTHEA_IS_NOT_SUBPROJECT)
+  # build shared lib if not used as subproject
+  add_library(${PROJECT_NAME}-amalthea SHARED ${amalthea_HEADERS} ${amalthea_SOURCES})
+  target_include_directories(${PROJECT_NAME}-amalthea PUBLIC
+          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+          $<INSTALL_INTERFACE:include/emf4cpp>
+      )
 
-set_target_properties(${PROJECT_NAME}-amalthea PROPERTIES COMPILE_FLAGS "-DMAKE_AMALTHEA_DLL" VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR})
-target_link_libraries(${PROJECT_NAME}-amalthea EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
+  set_target_properties(${PROJECT_NAME}-amalthea PROPERTIES COMPILE_FLAGS "-DMAKE_AMALTHEA_DLL" VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR})
+  target_link_libraries(${PROJECT_NAME}-amalthea EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
+else()
+  # provide library as interface
+  add_library(${PROJECT_NAME}-amalthea INTERFACE ${amalthea_HEADERS} ${amalthea_SOURCES})
+  target_include_directories(${PROJECT_NAME}-amalthea INTERFACE
+          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+          $<INSTALL_INTERFACE:include/emf4cpp>
+      )
+
+  target_link_libraries(${PROJECT_NAME}-amalthea INTERFACE EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
+endif(AMALTHEA_IS_NOT_SUBPROJECT)
+
+add_library(AMALTHEA::${PROJECT_NAME}-amalthea ALIAS ${PROJECT_NAME}-amalthea)
+
 install(TARGETS ${PROJECT_NAME}-amalthea EXPORT AMALTHEA LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 add_subdirectory(cmake)
