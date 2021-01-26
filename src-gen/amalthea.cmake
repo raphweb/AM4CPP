@@ -1659,23 +1659,19 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 if(AMALTHEA_IS_NOT_SUBPROJECT)
   # build shared lib if not used as subproject
   add_library(${PROJECT_NAME}-amalthea SHARED ${amalthea_HEADERS} ${amalthea_SOURCES})
-  target_include_directories(${PROJECT_NAME}-amalthea PUBLIC
-          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-          $<INSTALL_INTERFACE:include/emf4cpp>
-      )
-
   set_target_properties(${PROJECT_NAME}-amalthea PROPERTIES COMPILE_FLAGS "-DMAKE_AMALTHEA_DLL" VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR})
-  target_link_libraries(${PROJECT_NAME}-amalthea EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
 else()
-  # provide library as interface
-  add_library(${PROJECT_NAME}-amalthea INTERFACE ${amalthea_HEADERS} ${amalthea_SOURCES})
-  target_include_directories(${PROJECT_NAME}-amalthea INTERFACE
-          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-          $<INSTALL_INTERFACE:include/emf4cpp>
-      )
-
-  target_link_libraries(${PROJECT_NAME}-amalthea INTERFACE EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
+  # provide static library
+  add_library(${PROJECT_NAME}-amalthea STATIC ${amalthea_HEADERS} ${amalthea_SOURCES})
+  set_target_properties(${PROJECT_NAME}-amalthea PROPERTIES COMPILE_FLAGS "-fPIC")
 endif(AMALTHEA_IS_NOT_SUBPROJECT)
+
+target_include_directories(${PROJECT_NAME}-amalthea PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        $<INSTALL_INTERFACE:include/emf4cpp>
+    )
+
+target_link_libraries(${PROJECT_NAME}-amalthea EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
 
 add_library(AM4CPP::${PROJECT_NAME}-amalthea ALIAS ${PROJECT_NAME}-amalthea)
 
