@@ -4,7 +4,7 @@ if(NOT DEFINED PROJECT_NAME)
   set(AMALTHEA_IS_NOT_SUBPROJECT ON)
 endif()
 
-project ("amalthea" VERSION "1.0.0" LANGUAGES CXX)
+project ("am4cpp" VERSION "1.0.0" LANGUAGES CXX)
 
 include(GNUInstallDirs)
 

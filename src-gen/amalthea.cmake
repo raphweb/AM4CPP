@@ -1677,8 +1677,8 @@ else()
   target_link_libraries(${PROJECT_NAME}-amalthea INTERFACE EMF4CPP::emf4cpp-ecore EMF4CPP::emf4cpp-ecorecpp)
 endif(AMALTHEA_IS_NOT_SUBPROJECT)
 
-add_library(AMALTHEA::${PROJECT_NAME}-amalthea ALIAS ${PROJECT_NAME}-amalthea)
+add_library(AM4CPP::${PROJECT_NAME}-amalthea ALIAS ${PROJECT_NAME}-amalthea)
 
-install(TARGETS ${PROJECT_NAME}-amalthea EXPORT AMALTHEA LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(TARGETS ${PROJECT_NAME}-amalthea EXPORT AM4CPP LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 add_subdirectory(cmake)
