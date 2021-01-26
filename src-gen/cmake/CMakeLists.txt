@@ -1,23 +1,21 @@
-	string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UPPER)
-	set(package_name ${PROJECT_NAME_UPPER})
-	configure_file(${package_name}Config.cmake.in ${package_name}Config.cmake @ONLY)
+	configure_file(AM4CPPConfig.cmake.in AM4CPPConfig.cmake @ONLY)
 	
 	include(CMakePackageConfigHelpers)
 	write_basic_package_version_file(
-	    "${CMAKE_CURRENT_BINARY_DIR}/${package_name}ConfigVersion.cmake"
+	    "${CMAKE_CURRENT_BINARY_DIR}/AM4CPPConfigVersion.cmake"
 	    VERSION ${PROJECT_VERSION}
 	    COMPATIBILITY SameMajorVersion) # TODO
 	
-	export(EXPORT ${package_name}
-	    FILE "${CMAKE_CURRENT_BINARY_DIR}/${package_name}Targets.cmake"
-	    NAMESPACE ${package_name}::)
+	export(EXPORT AM4CPP
+	    FILE "${CMAKE_CURRENT_BINARY_DIR}/AM4CPPTargets.cmake"
+	    NAMESPACE AM4CPP::)
 	
-	install(EXPORT ${package_name} DESTINATION lib/cmake/${package_name}
-	    FILE ${package_name}Targets.cmake
-	    NAMESPACE ${package_name}::)
+	install(EXPORT AM4CPP DESTINATION lib/cmake/AM4CPP
+	    FILE AM4CPPTargets.cmake
+	    NAMESPACE AM4CPP::)
 	
 	install(FILES
-	    "${CMAKE_CURRENT_BINARY_DIR}/${package_name}Config.cmake"
-	    "${CMAKE_CURRENT_BINARY_DIR}/${package_name}ConfigVersion.cmake"
-	    DESTINATION lib/cmake/${package_name})
+	    "${CMAKE_CURRENT_BINARY_DIR}/AM4CPPConfig.cmake"
+	    "${CMAKE_CURRENT_BINARY_DIR}/AM4CPPConfigVersion.cmake"
+	    DESTINATION lib/cmake/AM4CPP)
 	
