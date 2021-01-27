@@ -5,10 +5,13 @@ project ("am4cpp" VERSION "1.0.0" LANGUAGES CXX)
 include(GNUInstallDirs)
 
 
-option(AM4CPP_TESTS "Build test programs" OFF)
+option(AM4CPP_TESTS "Build test programs" ON)
 
+#add_definitions(-DDEBUG)
 #set(EMF4CPP_RESOURCE_API ON CACHE BOOL "Enable resource API")
 #set(EMF4CPP_USE_QT_5 ON CACHE BOOL "Use QT 5 as a dependency")
+#add_definitions(-DQT5_SUPPORT)
+#add_definitions(-DECORECPP_RESOURCE_API)
 #set(EMF4CPP_USE_CPPREST ON CACHE BOOL "Use CPPREST SDK as a dependency")
 
 add_subdirectory(libs/emf4cpp)

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<am:Amalthea xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/1.0.0">
+  <swModel>
+    <tasks xmi:id="Task1?type=Task" name="Task1" stimuli="Stim_10ms?type=PeriodicStimulus" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Runnable1?type=Runnable"/>
+        </items>
+      </activityGraph>
+    </tasks>
+    <runnables xmi:id="Runnable1?type=Runnable" name="Runnable1" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Group" name="" ordered="true">
+          <items xsi:type="am:Ticks">
+            <default xsi:type="am:DiscreteValueConstant" value="200000"/>
+          </items>
+        </items>
+      </activityGraph>
+    </runnables>
+  </swModel>
+  <hwModel>
+    <definitions xsi:type="am:ProcessingUnitDefinition" xmi:id="CPU_Type_1?type=ProcessingUnitDefinition" name="CPU_Type_1" puType="CPU" features="Instructions/IPC?type=HwFeature"/>
+    <featureCategories xmi:id="Instructions?type=HwFeatureCategory" name="Instructions" featureType="performance">
+      <features xmi:id="Instructions/IPC?type=HwFeature" name="IPC" value="1.0"/>
+    </featureCategories>
+    <structures xmi:id="HW_System1?type=HwStructure" name="HW_System1" structureType="System">
+      <structures xmi:id="ECU1?type=HwStructure" name="ECU1" structureType="ECU">
+        <structures xmi:id="Microcontroller1?type=HwStructure" name="Microcontroller1" structureType="Microcontroller">
+          <modules xsi:type="am:ProcessingUnit" xmi:id="Core1?type=ProcessingUnit" name="Core1" frequencyDomain="FD_200MHz?type=FrequencyDomain" definition="CPU_Type_1?type=ProcessingUnitDefinition"/>
+        </structures>
+      </structures>
+    </structures>
+    <domains xsi:type="am:FrequencyDomain" xmi:id="FD_200MHz?type=FrequencyDomain" name="FD_200MHz" clockGating="false">
+      <defaultValue value="200.0" unit="MHz"/>
+    </domains>
+  </hwModel>
+  <osModel>
+    <operatingSystems name="OS1">
+      <taskSchedulers xmi:id="Sched1?type=TaskScheduler" name="Sched1">
+        <schedulingAlgorithm xsi:type="am:FixedPriorityPreemptive"/>
+      </taskSchedulers>
+    </operatingSystems>
+  </osModel>
+  <stimuliModel>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="Stim_10ms?type=PeriodicStimulus" name="Stim_10ms">
+      <recurrence value="10" unit="ms"/>
+    </stimuli>
+  </stimuliModel>
+  <mappingModel>
+    <schedulerAllocation scheduler="Sched1?type=TaskScheduler" responsibility="Core1?type=ProcessingUnit" executingPU="Core1?type=ProcessingUnit"/>
+    <taskAllocation task="Task1?type=Task" scheduler="Sched1?type=TaskScheduler" affinity="Core1?type=ProcessingUnit"/>
+  </mappingModel>
+</am:Amalthea>
